@@ -1,0 +1,4 @@
+codeception:
+    resource: "@CodeceptionBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,75 @@
+[2013-10-30 14:34:33] MyFirstFunctionalCept.php.INFO: am on page "/" [] []
+[2013-10-30 14:34:33] MyFirstFunctionalCept.php.INFO: see "Welcome!" [] []
+[2013-10-30 14:34:33] MyFirstFunctionalCept.php.INFO: PASSED [] []
+[2013-10-30 14:35:01] MyFirstFunctionalCept.php.INFO: am on page "/" [] []
+[2013-10-30 14:35:01] MyFirstFunctionalCept.php.INFO: see "Welcome! s" [] []
+[2013-10-30 14:35:01] MyFirstFunctionalCept.php.ALERT: Failed asserting that 
+-->  <bold>/</bold><info><!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="robots" content="noindex,nofollow" />
+        <title>Symfony - Welcome</title>
+        <link href="/bundles/framework/css/structure.css" rel="stylesheet" type="text/css"</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "welcome! s". [] []
+[2013-10-30 14:35:01] MyFirstFunctionalCept.php.INFO: # FAILED # [] []
+[2013-10-30 14:35:01] MyFirstFunctionalCept.php.INFO: PASSED [] []
+[2013-10-30 14:35:56] MyFirstFunctionalCept.php.INFO: am on page "/hello/Duy" [] []
+[2013-10-30 14:35:56] MyFirstFunctionalCept.php.INFO: see "Welcome!" [] []
+[2013-10-30 14:35:56] MyFirstFunctionalCept.php.INFO: PASSED [] []
+[2013-10-30 14:36:31] MyFirstFunctionalCept.php.INFO: am on page "/demo/hello/Duy" [] []
+[2013-10-30 14:36:32] MyFirstFunctionalCept.php.INFO: see "Welcome!" [] []
+[2013-10-30 14:36:32] MyFirstFunctionalCept.php.ALERT: Failed asserting that 
+-->  <bold>/demo/hello/Duy</bold><info><!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="robots" content="noindex,nofollow" />
+        <title>Hello Duy</title>
+        <link href="/bundles/framework/css/structure.css" rel="stylesheet" type="text/css" media="</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "welcome!". [] []
+[2013-10-30 14:36:32] MyFirstFunctionalCept.php.INFO: # FAILED # [] []
+[2013-10-30 14:36:32] MyFirstFunctionalCept.php.INFO: PASSED [] []
+[2013-10-30 14:36:45] MyFirstFunctionalCept.php.INFO: am on page "/demo/hello/Duy" [] []
+[2013-10-30 14:36:45] MyFirstFunctionalCept.php.INFO: see "Hello Duy!" [] []
+[2013-10-30 14:36:45] MyFirstFunctionalCept.php.INFO: PASSED [] []
+[2013-10-30 14:36:59] MyFirstFunctionalCept.php.INFO: am on page "/demo/hello/Duy" [] []
+[2013-10-30 14:36:59] MyFirstFunctionalCept.php.INFO: see "Hello Duys!" [] []
+[2013-10-30 14:36:59] MyFirstFunctionalCept.php.ALERT: Failed asserting that 
+-->  <bold>/demo/hello/Duy</bold><info><!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="robots" content="noindex,nofollow" />
+        <title>Hello Duy</title>
+        <link href="/bundles/framework/css/structure.css" rel="stylesheet" type="text/css" media="</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "hello duys!". [] []
+[2013-10-30 14:36:59] MyFirstFunctionalCept.php.INFO: # FAILED # [] []
+[2013-10-30 14:36:59] MyFirstFunctionalCept.php.INFO: PASSED [] []
+[2013-10-30 14:37:04] MyFirstFunctionalCept.php.INFO: am on page "/demo/hello/Duy" [] []
+[2013-10-30 14:37:04] MyFirstFunctionalCept.php.INFO: see "Hello Duy!" [] []
+[2013-10-30 14:37:04] MyFirstFunctionalCept.php.INFO: PASSED [] []
+[2013-10-30 14:37:08] MyFirstFunctionalCept.php.INFO: am on page "/demo/hello" [] []
+[2013-10-30 14:37:08] MyFirstFunctionalCept.php.INFO: see "Hello Duy!" [] []
+[2013-10-30 14:37:08] MyFirstFunctionalCept.php.ALERT: Failed asserting that 
+-->  <bold>/demo/hello</bold><info><!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="robots" content="noindex,nofollow" />
+        <title>    No route found for &quot;GET /demo/hello&quot; (404 Not Found)
+</title>
+        <link href="/bundles/framework/c</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "hello duy!". [] []
+[2013-10-30 14:37:08] MyFirstFunctionalCept.php.INFO: # FAILED # [] []
+[2013-10-30 14:37:08] MyFirstFunctionalCept.php.INFO: PASSED [] []
+[2013-10-30 14:37:12] MyFirstFunctionalCept.php.INFO: am on page "/demo/hello/Duy" [] []
+[2013-10-30 14:37:12] MyFirstFunctionalCept.php.INFO: see "Hello Duy!" [] []
+[2013-10-30 14:37:12] MyFirstFunctionalCept.php.INFO: PASSED [] []
+[2013-10-30 15:09:46] MyFirstFunctionalCept.php.INFO: am on page "/demo/hello/Duy" [] []
+[2013-10-30 15:09:47] MyFirstFunctionalCept.php.INFO: see "Hello Duy!" [] []
+[2013-10-30 15:09:47] MyFirstFunctionalCept.php.INFO: PASSED [] []
