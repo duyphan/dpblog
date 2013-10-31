@@ -10,9 +10,13 @@
 
 class_name: WebGuy
 modules:
-    enabled:
-        - PhpBrowser
+    enabled:        
         - WebHelper
+        - Db
+        - Selenium2    
     config:
-        PhpBrowser:
-            url: 'http://localhost/myapp/'
+      Selenium2:
+         url: 'http://localhost/duyphan-training/sfn2-codeception-project/web/app_dev.php/'
+         browser: firefox
+         capabilities:
+             unexpectedAlertBehaviour: 'accept'

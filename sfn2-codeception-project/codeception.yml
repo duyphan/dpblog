@@ -12,7 +12,7 @@ settings:
 modules:
     config:
         Db:
-            dsn: ''
-            user: ''
+            dsn: 'mysql:host=localhost;dbname=sfnCodeception_test'
+            user: 'root'
             password: ''
             dump: app/tests/_data/dump.sql

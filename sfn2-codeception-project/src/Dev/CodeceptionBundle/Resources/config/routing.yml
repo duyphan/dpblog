@@ -1,3 +1,15 @@
 codeception_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: CodeceptionBundle:Default:index }
+
+codeception_login:
+    pattern:  /login
+    defaults: { _controller: CodeceptionBundle:Page:login }
+    requirements:
+        _method:  GET|POST
+
+codeception_user:
+    pattern:  /user
+    defaults: { _controller: CodeceptionBundle:Page:user }
+    requirements:
+        _method:  GET

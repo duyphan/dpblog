@@ -1,0 +1,30 @@
+<!-- app/Resources/views/base.html.twig -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset=utf-8" />
+        <title>{% block title %}Tutorial Symfony2{% endblock %}</title>
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+
+        <section id="wrapper">            
+
+            <section class="main-col">
+                {% block body %}{% endblock %}
+            </section>            
+
+            <div id="footer">
+                {% block footer %}
+                    Symfony2 blog tutorial - created by <a href="https://github.com/duyphanasnet">duyphan</a>
+                {% endblock %}
+            </div>
+        </section>
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
