@@ -1,0 +1,8 @@
+class_name: ApiGuy
+modules:
+    enabled: [PhpBrowser, REST, ApiHelper]
+    config:
+      PhpBrowser:
+          url: http://localhost/duyphan-training/sfn2-codeception-project/web/app_dev.php/
+      REST:
+          url: http://localhost/duyphan-training/sfn2-codeception-project/web/app_dev.php/api/v1/
