@@ -1,7 +1,7 @@
 <?php
 $I = new WebGuy($scenario);
 
-$I->wantTo('verify register page');
+$I->wantTo('verify register page succesful');
 $I->amOnPage('/register');
 $I->see('Registration', 'h1');
 $I->fillField('Email', 'dp1206@gmail.com');
