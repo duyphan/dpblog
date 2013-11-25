@@ -1,22 +1,8 @@
 #!/usr/bin/ruby
-class BookInStock
-  attr_reader :isbn
-  attr_accessor :price
-  def initialize(isbn, price)
-    @isbn = isbn
-    @price = Float(price)
-  end
-  def price_in_cents
-    Integer(price*100 + 0.5)
-  end
-  def price_in_cents=(cents)
-    @price = cents / 100.0
-  end
-end
-
-book = BookInStock.new( "isbn1", 33.80)
-puts "Price = #{book.price} "
-puts "Price in cents = #{book.price_in_cents}"
-book.price_in_cents = 1234
-puts "Price = #{book.price} "
-puts "Price in cents = #{book.price_in_cents}"
+a = [ 45, 3, 19, 8 ]
+b = [ 'sam', 'max', 56, 98.9, 3, 10, 'jill' ]
+print (a + b).join(' '), "\n"
+print a[2], " ", b[4], " ", b[-2], "\n"
+print a.sort.join(' '), "\n"
+a << 57 << 9 << 'phil'
+print "A: ", a.join(' '), "\n"
