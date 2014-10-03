@@ -13,8 +13,11 @@
 @interface SignUpViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageLogoSignUpView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageIconOption;
+@property (weak, nonatomic) IBOutlet UIView *viewTextEmailAddress;
 @property (weak, nonatomic) IBOutlet UITextField *textEmailAddress;
+@property (weak, nonatomic) IBOutlet UIView *viewTextPassword;
 @property (weak, nonatomic) IBOutlet UITextField *textPassword;
+@property (weak, nonatomic) IBOutlet UIView *viewTextPasswordConfirm;
 @property (weak, nonatomic) IBOutlet UITextField *textPasswordConfirm;
 @property (weak, nonatomic) IBOutlet UIButton *buttonSignUpView;
 @property (weak, nonatomic) IBOutlet UIButton *buttonLogInView;
@@ -39,14 +42,14 @@
 {
     [super viewDidLoad];
     
-    self.textEmailAddress.layer.cornerRadius = 5;
-    self.textEmailAddress.clipsToBounds = YES;
+    self.viewTextEmailAddress.layer.cornerRadius = 5;
+    self.viewTextEmailAddress.clipsToBounds = YES;
     
-    self.textPassword.layer.cornerRadius = 5;
-    self.textPassword.clipsToBounds = YES;
+    self.viewTextPassword.layer.cornerRadius = 5;
+    self.viewTextPassword.clipsToBounds = YES;
     
-    self.textPasswordConfirm.layer.cornerRadius = 5;
-    self.textPasswordConfirm.clipsToBounds = YES;
+    self.viewTextPasswordConfirm.layer.cornerRadius = 5;
+    self.viewTextPasswordConfirm.clipsToBounds = YES;
     
     self.buttonSignUpView.layer.cornerRadius = 5;
     self.buttonSignUpView.clipsToBounds = YES;
@@ -127,9 +130,12 @@
     }
     
     // Animation
+    [self performSelector:@selector(transformViewUp:) withObject:self.viewTextEmailAddress afterDelay:0];
     [self performSelector:@selector(transformViewUp:) withObject:self.textEmailAddress afterDelay:0];
     [self performSelector:@selector(transformViewUp:) withObject:self.textPassword afterDelay:0];
     [self performSelector:@selector(transformViewUp:) withObject:self.textPasswordConfirm afterDelay:0];
+    [self performSelector:@selector(transformViewUp:) withObject:self.viewTextPassword afterDelay:0];
+    [self performSelector:@selector(transformViewUp:) withObject:self.viewTextPasswordConfirm afterDelay:0];
     [self performSelector:@selector(transformViewUp:) withObject:self.buttonSignUpView afterDelay:0];
     [self performSelector:@selector(transformViewUp:) withObject:self.buttonLogInView afterDelay:0];
     [self performSelector:@selector(transformViewUp:) withObject:self.labelSignUp afterDelay:0];
@@ -142,6 +148,9 @@
     [self performSelector:@selector(transformViewDown:) withObject:self.textEmailAddress afterDelay:0];
     [self performSelector:@selector(transformViewDown:) withObject:self.textPassword afterDelay:0];
     [self performSelector:@selector(transformViewDown:) withObject:self.textPasswordConfirm afterDelay:0];
+    [self performSelector:@selector(transformViewDown:) withObject:self.viewTextEmailAddress afterDelay:0];
+    [self performSelector:@selector(transformViewDown:) withObject:self.viewTextPassword afterDelay:0];
+    [self performSelector:@selector(transformViewDown:) withObject:self.viewTextPasswordConfirm afterDelay:0];
     [self performSelector:@selector(transformViewDown:) withObject:self.buttonSignUpView afterDelay:0];
     [self performSelector:@selector(transformViewDown:) withObject:self.buttonLogInView afterDelay:0];
     [self performSelector:@selector(transformViewDown:) withObject:self.labelSignUp afterDelay:0];

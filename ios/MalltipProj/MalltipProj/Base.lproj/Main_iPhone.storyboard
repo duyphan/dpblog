@@ -115,7 +115,7 @@ and Maps for thousands of Malls!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398" y="521"/>
+            <point key="canvasLocation" x="-502" y="-445"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="12U-Q0-DPq">
@@ -133,18 +133,26 @@ and Maps for thousands of Malls!</string>
                                 <rect key="frame" x="51" y="160" width="215" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" id="8Ch-kc-tc1">
+                            <view contentMode="scaleToFill" id="yfa-rP-zZF">
                                 <rect key="frame" x="43" y="249" width="234" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764712333679199" green="0.91764712333679199" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.89803928136825562" green="0.89803928136825562" blue="0.89803928136825562" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" id="8Ch-kc-tc1">
+                                <rect key="frame" x="57" y="249" width="210" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.64705884456634521" green="0.64705884456634521" blue="0.65098041296005249" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14.729999542236328"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="ljh-Co-8R2">
+                            <view contentMode="scaleToFill" id="iaa-xA-cwq">
                                 <rect key="frame" x="43" y="301" width="234" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764712333679199" green="0.91764712333679199" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.87450987100601196" green="0.87450987100601196" blue="0.87450987100601196" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="ljh-Co-8R2">
+                                <rect key="frame" x="57" y="301" width="210" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.68627452850341797" green="0.68627452850341797" blue="0.69019609689712524" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14.729999542236328"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -186,6 +194,9 @@ and Maps for thousands of Malls!</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="xjP-LF-SOg" kind="push" id="Uw2-BU-L85"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LXf-Uz-G3m">
                                 <rect key="frame" x="284" y="30" width="25" height="25"/>
@@ -210,11 +221,13 @@ and Maps for thousands of Malls!</string>
                         <outlet property="labeHaveNotAccount" destination="Q1z-o4-Lop" id="DWf-QI-NX4"/>
                         <outlet property="textEmailAddressLoginView" destination="8Ch-kc-tc1" id="ALi-oW-3rW"/>
                         <outlet property="textPasswordLoginView" destination="ljh-Co-8R2" id="GE4-M9-0lq"/>
+                        <outlet property="viewTextEmailAddressLoginView" destination="yfa-rP-zZF" id="0MI-eN-DL9"/>
+                        <outlet property="viewTextPasswordLoginView" destination="iaa-xA-cwq" id="60S-mR-zTm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ooz-tU-JXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24" y="824"/>
+            <point key="canvasLocation" x="-126" y="406"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="kwg-RD-qgS">
@@ -232,10 +245,14 @@ and Maps for thousands of Malls!</string>
                                 <rect key="frame" x="51" y="160" width="215" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="Jlj-dA-4jn">
+                            <view contentMode="scaleToFill" id="B3s-b6-nFf">
                                 <rect key="frame" x="43" y="318" width="234" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89803928136825562" green="0.89803928136825562" blue="0.89803928136825562" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.91764712333679199" green="0.91764712333679199" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="Jlj-dA-4jn">
+                                <rect key="frame" x="57" y="318" width="210" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -263,20 +280,32 @@ and Maps for thousands of Malls!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LbG-4k-Wod">
-                                <rect key="frame" x="284" y="90" width="24" height="24"/>
+                                <rect key="frame" x="284" y="30" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="x_button.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonCloseResetPasswordView:" destination="pww-cy-EvX" eventType="touchUpInside" id="QKn-m3-S4d"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="r1q-vx-upx"/>
+                    <connections>
+                        <outlet property="buttonSubmitResetPasswordView" destination="enZ-L5-Eya" id="Klu-LW-dQm"/>
+                        <outlet property="imageIconOptionResetPasswordView" destination="DDb-as-3Rj" id="FuY-sm-ED1"/>
+                        <outlet property="imageLogoResetPasswordView" destination="TIs-93-PV1" id="e2w-fA-Rpn"/>
+                        <outlet property="labelEnterEmailResetPasswordView" destination="0ak-gz-MpT" id="sfc-P2-hJ3"/>
+                        <outlet property="labelPasswordReset" destination="bri-Vj-xqI" id="Xma-LM-h3J"/>
+                        <outlet property="textEmailResetPasswordView" destination="Jlj-dA-4jn" id="Abg-jy-IR7"/>
+                        <outlet property="viewTextEmailResetPasswordView" destination="B3s-b6-nFf" id="q9P-eR-H3l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5G-gk-m5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478" y="824"/>
+            <point key="canvasLocation" x="368" y="406"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="YfJ-fa-vVD">
@@ -286,6 +315,18 @@ and Maps for thousands of Malls!</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" id="7iG-Ep-Dtt">
+                                <rect key="frame" x="43" y="239" width="235" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91764712333679199" green="0.91764712333679199" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" clearButtonMode="whileEditing" id="GKC-4T-MN8">
+                                <rect key="frame" x="57" y="239" width="210" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.64705884456634521" green="0.64705884456634521" blue="0.65098041296005249" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14.729999542236328"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" id="QdC-QN-ggM">
                                 <rect key="frame" x="92" y="58" width="139" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,26 +335,26 @@ and Maps for thousands of Malls!</string>
                                 <rect key="frame" x="51" y="160" width="215" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" clearButtonMode="whileEditing" id="GKC-4T-MN8">
-                                <rect key="frame" x="43" y="239" width="235" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764712333679199" green="0.91764712333679199" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="textColor" red="0.64705884456634521" green="0.64705884456634521" blue="0.65098041296005249" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14.729999542236328"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" id="EZZ-qg-6Jg">
+                            <view contentMode="scaleToFill" id="ucc-62-vhk">
                                 <rect key="frame" x="43" y="287" width="235" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91764712333679199" green="0.91764712333679199" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" id="EZZ-qg-6Jg">
+                                <rect key="frame" x="57" y="287" width="210" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.64705884456634521" green="0.64705884456634521" blue="0.65098041296005249" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14.699999809265137"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" clearButtonMode="whileEditing" id="wiP-aA-qg1">
+                            <view contentMode="scaleToFill" id="a3H-S1-GQI">
                                 <rect key="frame" x="43" y="335" width="235" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764712333679199" green="0.91764712333679199" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.89803928136825562" green="0.89803928136825562" blue="0.89803928136825562" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" clearButtonMode="whileEditing" id="wiP-aA-qg1">
+                                <rect key="frame" x="57" y="335" width="210" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.64705884456634521" green="0.64705884456634521" blue="0.65098041296005249" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14.699999809265137"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -336,6 +377,9 @@ and Maps for thousands of Malls!</string>
                                 <state key="normal" title="Log In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="TVs-fu-8pI" kind="push" id="tfk-9E-pqR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have a Malltip account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oHg-eH-Hnb">
                                 <rect key="frame" x="62" y="470" width="203" height="21"/>
@@ -369,11 +413,14 @@ and Maps for thousands of Malls!</string>
                         <outlet property="textEmailAddress" destination="GKC-4T-MN8" id="rly-2M-TKf"/>
                         <outlet property="textPassword" destination="EZZ-qg-6Jg" id="mBn-If-vaY"/>
                         <outlet property="textPasswordConfirm" destination="wiP-aA-qg1" id="2U7-mb-4kT"/>
+                        <outlet property="viewTextEmailAddress" destination="7iG-Ep-Dtt" id="mj8-Yb-NcV"/>
+                        <outlet property="viewTextPassword" destination="ucc-62-vhk" id="0tg-us-UnD"/>
+                        <outlet property="viewTextPasswordConfirm" destination="a3H-S1-GQI" id="TlP-Bp-Axe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8R-Oi-4O3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="-36"/>
+            <point key="canvasLocation" x="178" y="-433"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dmN-as-v68">
@@ -391,7 +438,7 @@ and Maps for thousands of Malls!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEg-Mv-wMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-773" y="527"/>
+            <point key="canvasLocation" x="-1018" y="-433"/>
         </scene>
     </scenes>
     <resources>
@@ -411,4 +458,8 @@ and Maps for thousands of Malls!</string>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="tfk-9E-pqR"/>
+        <segue reference="Uw2-BU-L85"/>
+    </inferredMetricsTieBreakers>
 </document>

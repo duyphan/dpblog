@@ -40,6 +40,7 @@
 		7788B37719DAAC50008AFA62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7788B35619DAAC50008AFA62 /* UIKit.framework */; };
 		7788B37F19DAAC50008AFA62 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7788B37D19DAAC50008AFA62 /* InfoPlist.strings */; };
 		7788B38119DAAC50008AFA62 /* MalltipProjTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7788B38019DAAC50008AFA62 /* MalltipProjTests.m */; };
+		77D5E12A19DE3FA5001075DD /* button_submit_keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D5E12919DE3FA5001075DD /* button_submit_keyboard.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		7788B37C19DAAC50008AFA62 /* MalltipProjTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MalltipProjTests-Info.plist"; sourceTree = "<group>"; };
 		7788B37E19DAAC50008AFA62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7788B38019DAAC50008AFA62 /* MalltipProjTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MalltipProjTests.m; sourceTree = "<group>"; };
+		77D5E12919DE3FA5001075DD /* button_submit_keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_submit_keyboard.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 		7788B38B19DAAC68008AFA62 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				77D5E12919DE3FA5001075DD /* button_submit_keyboard.png */,
 				772D2A3819DD362D008213C6 /* x_button.png */,
 				773254B719DD066600C6F81C /* button_signup_keyboard.png */,
 				773254A919DCE78100C6F81C /* favorites.png */,
@@ -343,6 +346,7 @@
 				773254B419DCE78100C6F81C /* store.png in Resources */,
 				772D2A3919DD362D008213C6 /* x_button.png in Resources */,
 				7788B36E19DAAC50008AFA62 /* Images.xcassets in Resources */,
+				77D5E12A19DE3FA5001075DD /* button_submit_keyboard.png in Resources */,
 				77540ECE19DBEB2F003C682E /* icon_option.png in Resources */,
 				773254B119DCE78100C6F81C /* icon_or.png in Resources */,
 				773254B519DCE78100C6F81C /* tips.png in Resources */,

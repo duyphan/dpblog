@@ -8,6 +8,6 @@
 
 #import "ViewController.h"
 
-@interface ResetPasswordViewController : ViewController
+@interface ResetPasswordViewController : ViewController <UITextFieldDelegate>
 
 @end

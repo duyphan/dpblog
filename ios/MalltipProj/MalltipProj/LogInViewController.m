@@ -13,7 +13,9 @@
 @interface LogInViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageLogoLoginView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageIconOptionLoginView;
+@property (weak, nonatomic) IBOutlet UIView *viewTextEmailAddressLoginView;
 @property (weak, nonatomic) IBOutlet UITextField *textEmailAddressLoginView;
+@property (weak, nonatomic) IBOutlet UIView *viewTextPasswordLoginView;
 @property (weak, nonatomic) IBOutlet UITextField *textPasswordLoginView;
 @property (weak, nonatomic) IBOutlet UIButton *buttonLoginLoginView;
 @property (weak, nonatomic) IBOutlet UIButton *buttonResetPasswordLoginView;
@@ -40,11 +42,11 @@
     [super viewDidLoad];
     
     // Custom UI
-    self.textEmailAddressLoginView.layer.cornerRadius = 5;
-    self.textEmailAddressLoginView.clipsToBounds = YES;
+    self.viewTextEmailAddressLoginView.layer.cornerRadius = 5;
+    self.viewTextEmailAddressLoginView.clipsToBounds = YES;
     
-    self.textPasswordLoginView.layer.cornerRadius = 5;
-    self.textPasswordLoginView.clipsToBounds = YES;
+    self.viewTextPasswordLoginView.layer.cornerRadius = 5;
+    self.viewTextPasswordLoginView.clipsToBounds = YES;
     
     self.buttonLoginLoginView.layer.cornerRadius = 5;
     self.buttonLoginLoginView.clipsToBounds = YES;
@@ -125,6 +127,8 @@
     // Animation
     [self performSelector:@selector(transformViewUp:) withObject:self.textEmailAddressLoginView afterDelay:0];
     [self performSelector:@selector(transformViewUp:) withObject:self.textPasswordLoginView afterDelay:0];
+    [self performSelector:@selector(transformViewUp:) withObject:self.viewTextEmailAddressLoginView afterDelay:0];
+    [self performSelector:@selector(transformViewUp:) withObject:self.viewTextPasswordLoginView afterDelay:0];
     [self performSelector:@selector(transformViewUp:) withObject:self.buttonLoginLoginView afterDelay:0];
     [self performSelector:@selector(hideLogoAndButtonSignUp) withObject:nil afterDelay:0.1];
     [self performSelector:@selector(zoomViewOut:) withObject:self.imageLogoLoginView afterDelay:0.3];
@@ -134,6 +138,8 @@
 {
     [self performSelector:@selector(transformViewDown:) withObject:self.textEmailAddressLoginView afterDelay:0];
     [self performSelector:@selector(transformViewDown:) withObject:self.textPasswordLoginView afterDelay:0];
+    [self performSelector:@selector(transformViewDown:) withObject:self.viewTextEmailAddressLoginView afterDelay:0];
+    [self performSelector:@selector(transformViewDown:) withObject:self.viewTextPasswordLoginView afterDelay:0];
     [self performSelector:@selector(transformViewDown:) withObject:self.buttonLoginLoginView afterDelay:0];
     [self performSelector:@selector(showLogoAndButtonSignUp) withObject:nil afterDelay:0.5];
     [self performSelector:@selector(zoomViewIn:) withObject:self.imageLogoLoginView afterDelay:0.3];
