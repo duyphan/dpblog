@@ -45,7 +45,7 @@ static BOOL check = NO;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationController.navigationBar.hidden = YES;
+//    self.navigationController.navigationBar.hidden = YES;
     
     // Position Image logo
     self.imageLogo.frame = CGRectMake(65, 235, 192, 83);
@@ -219,12 +219,12 @@ static BOOL check = NO;
 {
     [UIView animateWithDuration:1.f
                      animations:^{
-                         [self.imageTip setHidden:![self.imageTip isHidden]];
-                         [self.imageStore setHidden:![self.imageStore isHidden]];
-                         [self.imageFavorite setHidden:![self.imageFavorite isHidden]];
-                         [self.imageMallmap setHidden:![self.imageMallmap isHidden]];
+//                         [self.imageTip setHidden:![self.imageTip isHidden]];
+//                         [self.imageStore setHidden:![self.imageStore isHidden]];
+//                         [self.imageFavorite setHidden:![self.imageFavorite isHidden]];
+//                         [self.imageMallmap setHidden:![self.imageMallmap isHidden]];
                          [self.imageWelcome setHidden:![self.imageWelcome isHidden]];
-                         [self.labelDescription setHidden:![self.labelDescription isHidden]];
+//                         [self.labelDescription setHidden:![self.labelDescription isHidden]];
                      }];
 }
 

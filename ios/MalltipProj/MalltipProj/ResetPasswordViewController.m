@@ -11,7 +11,6 @@
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 @interface ResetPasswordViewController ()
-- (IBAction)buttonCloseResetPasswordView:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *imageIconOptionResetPasswordView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageLogoResetPasswordView;
 @property (weak, nonatomic) IBOutlet UILabel *labelEnterEmailResetPasswordView;
@@ -19,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIView *viewTextEmailResetPasswordView;
 @property (weak, nonatomic) IBOutlet UITextField *textEmailResetPasswordView;
 @property (weak, nonatomic) IBOutlet UIButton *buttonSubmitResetPasswordView;
+- (IBAction)buttonCloseResetPasswordView:(id)sender;
+- (IBAction)performButtonSubmit:(id)sender;
 
 @end
 
@@ -84,7 +85,7 @@
     signUpButton.adjustsImageWhenHighlighted = NO;
     [signUpButton setImage:[UIImage imageNamed:@"button_submit_keyboard.png"] forState:UIControlStateNormal];
     [signUpButton setImage:[UIImage imageNamed:@"button_submit_keyboard.png"] forState:UIControlStateHighlighted];
-    [signUpButton addTarget:self action:@selector(performStartSearchViewController) forControlEvents:UIControlEventTouchUpInside];
+    [signUpButton addTarget:self action:@selector(performSubmitResetPasswordViewController) forControlEvents:UIControlEventTouchUpInside];
     
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -224,10 +225,40 @@
 
 - (IBAction)buttonCloseResetPasswordView:(id)sender;
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)performStartSearchViewController;
+- (IBAction)performButtonSubmit:(id)sender;
 {
+    if ([self stringIsValidEmail:self.textEmailResetPasswordView.text]) {
+        UIAlertView *success = [[UIAlertView alloc]initWithTitle:@"Success" message:@"Reset password is successful!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [success show];
+        
+    } else {
+        UIAlertView *error = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Enter email and password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [error show];
+    }
+}
+
+- (BOOL)stringIsValidEmail:(NSString *)checkString;
+{
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
+}
+
+- (void)performSubmitResetPasswordViewController;
+{
+    if ([self stringIsValidEmail:self.textEmailResetPasswordView.text]) {
+        UIAlertView *success = [[UIAlertView alloc]initWithTitle:@"Success" message:@"Reset password is successful!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [success show];
+        
+    } else {
+        UIAlertView *error = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Enter email and password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [error show];
+    }
 }
 @end

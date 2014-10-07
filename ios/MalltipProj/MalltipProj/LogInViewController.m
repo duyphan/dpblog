@@ -7,6 +7,7 @@
 //
 
 #import "LogInViewController.h"
+#import "SearchViewController.h"
 
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
@@ -21,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonResetPasswordLoginView;
 @property (weak, nonatomic) IBOutlet UILabel *labeHaveNotAccount;
 @property (weak, nonatomic) IBOutlet UIButton *buttonSignUpLoginView;
+- (IBAction)performButtonLogin:(id)sender;
 
 - (IBAction)closeLoginView:(id)sender;
 
@@ -238,9 +240,47 @@
 
 - (void)performStartSearchViewController;
 {
+    if ([self stringIsValidEmail:self.textEmailAddressLoginView.text] &&
+        ![self.textPasswordLoginView.text isEqualToString:@""] &&
+        [self.textEmailAddressLoginView.text isEqualToString:@"duy.phan@asnet.com.vn"] &&
+        [self.textPasswordLoginView.text isEqualToString:@"duyphan"]) {
+        
+        SearchViewController *homeTabBarView = [self.storyboard instantiateViewControllerWithIdentifier:@"navigationController"];
+        [self presentViewController:homeTabBarView animated:YES completion:nil];
+        
+    } else {
+        UIAlertView *error = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Enter email and password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [error show];
+    }
+}
+
+- (BOOL)stringIsValidEmail:(NSString *)checkString;
+{
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
+}
+
+- (IBAction)performButtonLogin:(id)sender;
+{
+    if ([self stringIsValidEmail:self.textEmailAddressLoginView.text] &&
+        ![self.textPasswordLoginView.text isEqualToString:@""] &&
+        [self.textEmailAddressLoginView.text isEqualToString:@"duy.phan@asnet.com.vn"] &&
+        [self.textPasswordLoginView.text isEqualToString:@"duyphan"]) {
+        
+        SearchViewController *homeTabBarView = [self.storyboard instantiateViewControllerWithIdentifier:@"navigationController"];
+        [self presentViewController:homeTabBarView animated:YES completion:nil];
+        
+    } else {
+        UIAlertView *error = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Enter email and password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [error show];
+    }
 }
 
 - (IBAction)closeLoginView:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

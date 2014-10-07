@@ -9,6 +9,7 @@
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 #import "SignUpViewController.h"
+#import "SearchViewController.h"
 
 @interface SignUpViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageLogoSignUpView;
@@ -25,6 +26,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelSignUp;
 
 - (IBAction)close:(id)sender;
+- (IBAction)handleButtonSignUp:(id)sender;
+
+- (BOOL)stringIsValidEmail:(NSString *)checkString;
 @end
 
 @implementation SignUpViewController
@@ -236,14 +240,15 @@
 
 - (void)performStartSearchViewController;
 {
-//    if ([self stringIsValidEmail:self.textFieldEmail.text] && ![self.textFieldPassword.text isEqualToString:@""] && ![self.textFieldConfirmPassword.text isEqualToString:@""] && [self.textFieldPassword.text isEqualToString:self.textFieldConfirmPassword.text]) {
-//        MTPStartSearchViewController *newStartSearchViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StartSearchViewController"];
-//        [self.navigationController pushViewController:newStartSearchViewController animated:YES];
-//        
-//    } else {
-//        UIAlertView *error = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Enter email and password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//        [error show];
-//    }
+    if ([self stringIsValidEmail:self.textEmailAddress.text] && ![self.textPassword.text isEqualToString:@""] && ![self.textPasswordConfirm.text isEqualToString:@""] && [self.textPassword.text isEqualToString:self.textPasswordConfirm.text]) {
+        
+        SearchViewController *homeTabBarView = [self.storyboard instantiateViewControllerWithIdentifier:@"navigationController"];
+        [self presentViewController:homeTabBarView animated:YES completion:nil];
+        
+    } else {
+        UIAlertView *error = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Enter email and password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [error show];
+    }
 }
 
 /*
@@ -259,6 +264,31 @@
 
 - (IBAction)close:(id)sender;
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (BOOL)stringIsValidEmail:(NSString *)checkString;
+{
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
+}
+
+- (IBAction)handleButtonSignUp:(id)sender;
+{
+    
+    if ([self stringIsValidEmail:self.textEmailAddress.text] && ![self.textPassword.text isEqualToString:@""] && ![self.textPasswordConfirm.text isEqualToString:@""] && [self.textPassword.text isEqualToString:self.textPasswordConfirm.text]) {
+        
+        SearchViewController *homeTabBarView = [self.storyboard instantiateViewControllerWithIdentifier:@"navigationController"];
+        //        [self.navigationController pushViewController:homeTabBarView animated:YES];
+        [self presentViewController:homeTabBarView animated:YES completion:nil];
+        
+    } else {
+        UIAlertView *error = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Enter email and password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [error show];
+    }
 }
 @end
