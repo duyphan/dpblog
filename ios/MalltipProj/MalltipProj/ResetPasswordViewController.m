@@ -46,6 +46,13 @@
     self.buttonSubmitResetPasswordView.clipsToBounds = YES;
     
     self.textEmailResetPasswordView.delegate = self;
+    
+    // Hide keyboard
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,6 +82,11 @@
                    name:UIKeyboardWillShowNotification object:nil];
     [center addObserver:self selector:@selector(handleWhenKeyboardHide:)
                    name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)dismissKeyboard;
+{
+    [self.textEmailResetPasswordView resignFirstResponder];
 }
 
 - (void) handleWhenKeyboardShow:(NSNotification *)paramNotification;

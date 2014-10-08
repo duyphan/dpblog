@@ -278,7 +278,7 @@ and Maps for thousands of Malls!</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91764712333679199" green="0.91764712333679199" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" minimumFontSize="17" clearButtonMode="whileEditing" id="C0S-9g-tpy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" id="C0S-9g-tpy">
                                 <rect key="frame" x="52" y="340" width="215" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -347,8 +347,8 @@ and Maps for thousands of Malls!</string>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15.850000381469727"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri: 9am - 9:30pm • 1 mile away" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kKb-Gr-nqr">
-                                                    <rect key="frame" x="20" y="29" width="300" height="15"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri: 9am - 9:30pm • " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kKb-Gr-nqr">
+                                                    <rect key="frame" x="20" y="29" width="103" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11.319999694824219"/>
                                                     <nil key="highlightedColor"/>
@@ -358,15 +358,22 @@ and Maps for thousands of Malls!</string>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Tips" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qyY-wL-S23">
-                                                    <rect key="frame" x="40" y="43" width="42" height="21"/>
+                                                    <rect key="frame" x="40" y="43" width="58" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11.319999694824219"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mQM-5O-mnb">
-                                                    <rect key="frame" x="84" y="43" width="78" height="21"/>
+                                                    <rect key="frame" x="86" y="43" width="78" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11.319999694824219"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 mile away" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ycf-Vv-twM">
+                                                    <rect key="frame" x="121" y="26" width="105" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11.319999694824219"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -418,7 +425,7 @@ and Maps for thousands of Malls!</string>
             </objects>
             <point key="canvasLocation" x="-634" y="196"/>
         </scene>
-        <!--Home Tab Bar View Controller - Home-->
+        <!--Home Tab Bar View Controller-->
         <scene sceneID="ceo-6E-xzT">
             <objects>
                 <viewController storyboardIdentifier="homeTabBarView" id="S4j-dZ-QQD" customClass="HomeTabBarViewController" sceneMemberID="viewController">
@@ -430,8 +437,8 @@ and Maps for thousands of Malls!</string>
                                 <rect key="frame" x="0.0" y="20" width="320" height="122"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mall of America" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WdJ-qE-K4s">
-                                <rect key="frame" x="85" y="50" width="151" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mall of America" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WdJ-qE-K4s">
+                                <rect key="frame" x="0.0" y="50" width="320" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -534,14 +541,14 @@ and Maps for thousands of Malls!</string>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="342" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vwX-nt-5fa">
-                                        <rect key="frame" x="50" y="144" width="58" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="342" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vwX-nt-5fa">
+                                        <rect key="frame" x="45" y="144" width="43" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5iB-vl-7Hc">
-                                        <rect key="frame" x="201" y="144" width="58" height="24"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5iB-vl-7Hc">
+                                        <rect key="frame" x="193" y="144" width="43" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="highlightedColor"/>
@@ -588,14 +595,14 @@ and Maps for thousands of Malls!</string>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oST-7v-xCm">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oST-7v-xCm">
                                         <rect key="frame" x="190" y="212" width="23" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19.940000534057617"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1c9-sh-dkU">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1c9-sh-dkU">
                                         <rect key="frame" x="190" y="255" width="23" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19.940000534057617"/>
@@ -636,7 +643,7 @@ Saturday: </string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="icon-home.png" id="PAe-6I-lKU"/>
+                    <navigationItem key="navigationItem" id="z9L-bm-TkD"/>
                     <connections>
                         <outlet property="buttonHideAllHours" destination="UPN-Ms-jqu" id="FOX-3d-W5a"/>
                         <outlet property="buttonSeeAllHours" destination="94h-FV-nq0" id="3Sb-xw-BwQ"/>
@@ -645,11 +652,16 @@ Saturday: </string>
                         <outlet property="labelDayOfWeek" destination="1KS-2j-ehx" id="Xhm-Ko-D6L"/>
                         <outlet property="labelTime" destination="8DE-AY-dgN" id="A0h-C1-dMs"/>
                         <outlet property="labelTimeOfWeek" destination="6u5-4h-SPs" id="8RO-db-4ks"/>
+                        <outlet property="nameOfMall" destination="WdJ-qE-K4s" id="355-ao-zB1"/>
+                        <outlet property="numberOfSavedStores" destination="1c9-sh-dkU" id="Fpc-dp-pt3"/>
+                        <outlet property="numberOfSavedTips" destination="oST-7v-xCm" id="aDz-dl-8mL"/>
+                        <outlet property="numberOfStores" destination="5iB-vl-7Hc" id="Jto-EH-fWt"/>
+                        <outlet property="numberOfTips" destination="vwX-nt-5fa" id="wLK-pn-pw3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSF-gr-9NS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="-919"/>
+            <point key="canvasLocation" x="781" y="-919"/>
         </scene>
         <!--Favorites Tab Bar View Controller - Favorites-->
         <scene sceneID="zTb-Z4-1DN">
@@ -913,10 +925,10 @@ Saturday: </string>
             </objects>
             <point key="canvasLocation" x="-1582" y="-258"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="Odh-XF-d6l">
             <objects>
-                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="wlk-MX-BHh" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="wlk-MX-BHh" customClass="TabBarViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Znj-y9-nu4">
@@ -924,7 +936,7 @@ Saturday: </string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="S4j-dZ-QQD" kind="relationship" relationship="viewControllers" id="LCS-GR-Bid"/>
+                        <segue destination="vF9-fR-flj" kind="relationship" relationship="viewControllers" id="LCS-GR-Bid"/>
                         <segue destination="FUj-sY-mZf" kind="relationship" relationship="viewControllers" id="Onb-Mm-QPG"/>
                         <segue destination="qMf-2I-ZEa" kind="relationship" relationship="viewControllers" id="let-Hq-cCd"/>
                         <segue destination="6c5-9U-f3M" kind="relationship" relationship="viewControllers" id="2z5-Qu-W9r"/>
@@ -983,6 +995,9 @@ Saturday: </string>
                                             <color key="titleColor" red="0.32549020649999999" green="0.32549020649999999" blue="0.33725491169999999" alpha="1" colorSpace="deviceRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="9pC-VG-7zz" kind="modal" id="Tv0-47-fKG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.95686280727386475" green="0.95686280727386475" blue="0.95686280727386475" alpha="1" colorSpace="deviceRGB"/>
@@ -1036,6 +1051,57 @@ Saturday: </string>
             </objects>
             <point key="canvasLocation" x="675" y="-248"/>
         </scene>
+        <!--Filter Store View Controller-->
+        <scene sceneID="jKK-cn-nLe">
+            <objects>
+                <viewController id="9pC-VG-7zz" customClass="FilterStoreViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wPt-D7-lNE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="YXX-dS-WYv">
+                                <rect key="frame" x="-2" y="70" width="325" height="415"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Stores By Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BjC-OO-E0b">
+                                <rect key="frame" x="12" y="38" width="205" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18.110000610351562"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AGv-tK-nUT">
+                                <rect key="frame" x="290" y="35" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="x_button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCloseButton:" destination="9pC-VG-7zz" eventType="touchUpInside" id="Cp4-hT-89m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oCg-nj-rh3">
+                                <rect key="frame" x="43" y="493" width="235" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.62352943420410156" blue="0.9803922176361084" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13.579999923706055"/>
+                                <state key="normal" title="Filter">
+                                    <color key="titleColor" red="0.95686280729999995" green="0.95686280729999995" blue="0.95686280729999995" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="FilterScrollView" destination="YXX-dS-WYv" id="DKK-P4-eJ0"/>
+                        <outlet property="buttonFilterStore" destination="oCg-nj-rh3" id="JxE-T8-XB1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JgD-b8-akn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="-248"/>
+        </scene>
         <!--Navigation Controller - Store-->
         <scene sceneID="VjM-C1-6EM">
             <objects>
@@ -1054,6 +1120,22 @@ Saturday: </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HG9-yJ-pvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="255" y="-248"/>
+        </scene>
+        <!--Navigation Controller - Home-->
+        <scene sceneID="jRj-lt-S8F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vF9-fR-flj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="icon-home.png" id="PAe-6I-lKU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RAy-VG-IVe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dn9-nC-tzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="-919"/>
         </scene>
     </scenes>
     <resources>
@@ -1096,7 +1178,7 @@ Saturday: </string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="0CA-0Z-q9H"/>
         <segue reference="qNO-jZ-WoT"/>
+        <segue reference="1iR-V9-lvZ"/>
     </inferredMetricsTieBreakers>
 </document>

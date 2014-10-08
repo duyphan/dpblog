@@ -10,12 +10,17 @@
 
 @interface HomeTabBarViewController ()
 @property (weak, nonatomic) IBOutlet UIView *contentsView;
+@property (weak, nonatomic) IBOutlet UILabel *nameOfMall;
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackgroundView;
 @property (weak, nonatomic) IBOutlet UILabel *labelTime;
 @property (weak, nonatomic) IBOutlet UIButton *buttonSeeAllHours;
 @property (weak, nonatomic) IBOutlet UIButton *buttonHideAllHours;
 @property (weak, nonatomic) IBOutlet UILabel *labelDayOfWeek;
 @property (weak, nonatomic) IBOutlet UILabel *labelTimeOfWeek;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfTips;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfStores;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfSavedTips;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfSavedStores;
 - (IBAction)handlePerformSeeAllHours:(id)sender;
 - (IBAction)handleHideAllHours:(id)sender;
 @end
@@ -39,6 +44,11 @@
     self.buttonHideAllHours.hidden = YES;
     self.labelDayOfWeek.hidden = YES;
     self.labelTimeOfWeek.hidden = YES;
+    self.nameOfMall.text = self.mall.mallName;
+    self.numberOfTips.text = [NSString stringWithFormat:@"%ld", (long)self.mall.numberOfTips];
+    self.numberOfStores.text = [NSString stringWithFormat:@"%ld", (long)self.mall.numberOfStories];
+    self.numberOfSavedTips.text = [NSString stringWithFormat:@"%ld", (long)self.mall.numberOfSaveTips];
+    self.numberOfSavedStores.text = [NSString stringWithFormat:@"%ld", (long)self.mall.numberOfSaveStories];
 }
 
 - (void)didReceiveMemoryWarning

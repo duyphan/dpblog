@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "LibraryAPI.h"
+#import "Store.h"
 
 @interface StoreTabBarViewController : ViewController <UITableViewDelegate, UITableViewDataSource>
-
+//@property (strong, nonatomic) Store *store;
 @end

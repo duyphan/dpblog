@@ -7,13 +7,13 @@
 //
 
 #import "SearchResultViewController.h"
-#import "HomeTabBarViewController.h"
+
 static NSString *listMalls = @"ListMalls";
 
 @interface SearchResultViewController ()
 - (IBAction)buttonBack:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *listMallsView;
-
+@property (strong, nonatomic) NSArray *malls;
 @end
 
 @implementation SearchResultViewController
@@ -30,6 +30,12 @@ static NSString *listMalls = @"ListMalls";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Get the malls data
+    LibraryAPI *dataManager = [LibraryAPI sharedInstance];
+    self.malls = [dataManager getAllMalls];
+    
+//    NSLog(@"Count = %lu", (unsigned long)self.malls.count);
     
     self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.title = @"MALLS";
@@ -64,6 +70,7 @@ static NSString *listMalls = @"ListMalls";
 {
     UILabel *titleOfMall;
     UILabel *timeOfMall;
+    UILabel *distanceOfMall;
     UILabel *mountOfTipsMall;
     UILabel *statusOfMall;
     UIImageView *iconTip;
@@ -113,17 +120,28 @@ static NSString *listMalls = @"ListMalls";
         statusOfMall.tag = 1009;
         statusOfMall.font = [UIFont fontWithName:@"HelveticaNeue" size:11.3];
         [cell.contentView addSubview:statusOfMall];
+        
+        CGRect frame6=CGRectMake(110, 25, 105, 21);
+        distanceOfMall=[[UILabel alloc]init];
+        distanceOfMall.frame=frame6;
+        distanceOfMall.tag = 1010;
+        distanceOfMall.font = [UIFont fontWithName:@"HelveticaNeue" size:11.3];
+        [cell.contentView addSubview:distanceOfMall];
     } else {
         titleOfMall = (UILabel *)[cell.contentView viewWithTag:1001];
         timeOfMall = (UILabel *)[cell.contentView viewWithTag:1003];
         iconTip = (UIImageView *)[cell.contentView viewWithTag:1005];
         titleOfMall = (UILabel *)[cell.contentView viewWithTag:1007];
         timeOfMall = (UILabel *)[cell.contentView viewWithTag:1009];
+        distanceOfMall = (UILabel *)[cell.contentView viewWithTag:1010];
     }
     
-    titleOfMall.text = @"Mall of America";
-    timeOfMall.text = @"Fri: 9am - 9:30pm • 1 mile away";
-    mountOfTipsMall.text = @"12 Tips";
+    Mall *mall = [self.malls objectAtIndex:indexPath.row];
+    
+    titleOfMall.text = [NSString stringWithString:mall.mallName];
+    timeOfMall.text = [NSString stringWithFormat:@"Fri:9am-9:30pm • "];
+    distanceOfMall.text = [NSString stringWithFormat:@"%ld mile away", lroundf(mall.distance)];
+    mountOfTipsMall.text = [NSString stringWithFormat:@"%ld Tips", (long)mall.numberOfTips];
     statusOfMall.text = @"Available";
     
     return cell;
@@ -131,13 +149,48 @@ static NSString *listMalls = @"ListMalls";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    HomeTabBarViewController *homeTabBarView = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarController"];
-    [self.navigationController pushViewController:homeTabBarView animated:YES];
+//    HomeTabBarViewController *homeTabBarView = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarController"];
+//    [self.navigationController pushViewController:homeTabBarView animated:YES];
+//    
+//    Mall *mall = [self.malls objectAtIndex:indexPath.row];
+//    
+//    homeTabBarView.mall = mall;
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    
+    TabBarViewController *tabbarController = [storyBoard instantiateViewControllerWithIdentifier:@"tabBarController"];
+    
+    HomeTabBarViewController *homeViewController = [storyBoard instantiateViewControllerWithIdentifier:@"homeTabBarView"];
+    
+    appDelegate.window.rootViewController = tabbarController;
+    
+    UINavigationController *navController = [tabbarController.viewControllers objectAtIndex:0];
+    
+    [navController pushViewController:homeViewController animated:YES];
+    
+    Mall *mall = [self.malls objectAtIndex:indexPath.row];
+    
+    homeViewController.mall = mall;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+//    if (deviceHeight480) {
+//        return 61.5f;
+//    }
+    return 73.0f;
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-    return 10;
+    return self.malls.count;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+{
+    return 1;
 }
 
 @end

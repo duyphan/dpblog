@@ -7,6 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "HomeTabBarViewController.h"
+#import "Mall.h"
+#import "LibraryAPI.h"
+#import "AppDelegate.h"
+#import "TabBarViewController.h"
 
 @interface SearchResultViewController : ViewController <UITableViewDataSource, UITableViewDelegate>
 

@@ -58,6 +58,13 @@
     
     self.textEmailAddressLoginView.delegate = self;
     self.textPasswordLoginView.delegate = self;
+    
+    // Hide keyboard
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,6 +94,12 @@
                    name:UIKeyboardWillShowNotification object:nil];
     [center addObserver:self selector:@selector(handleWhenKeyboardHide:)
                    name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)dismissKeyboard;
+{
+    [self.textEmailAddressLoginView resignFirstResponder];
+    [self.textPasswordLoginView resignFirstResponder];
 }
 
 - (void) handleWhenKeyboardShow:(NSNotification *)paramNotification;
@@ -218,6 +231,7 @@
     self.imageIconOptionLoginView.hidden = NO;
     self.labeHaveNotAccount.hidden = NO;
     self.buttonSignUpLoginView.hidden = NO;
+    self.buttonResetPasswordLoginView.hidden = NO;
 }
 
 - (void)hideLogoAndButtonSignUp;
@@ -225,6 +239,7 @@
     self.imageIconOptionLoginView.hidden = YES;
     self.labeHaveNotAccount.hidden = YES;
     self.buttonSignUpLoginView.hidden = YES;
+    self.buttonResetPasswordLoginView.hidden = YES;
 }
 
 /*

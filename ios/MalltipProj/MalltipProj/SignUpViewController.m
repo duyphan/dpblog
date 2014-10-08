@@ -65,6 +65,13 @@
 //    self.textEmailAddress.layer.borderWidth = 0.0f;
     self.textPassword.delegate = self;
     self.textPasswordConfirm.delegate = self;
+    
+    // Hide keyboard
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning
@@ -160,6 +167,17 @@
     [self performSelector:@selector(transformViewDown:) withObject:self.labelSignUp afterDelay:0];
     [self performSelector:@selector(showLogo) withObject:nil afterDelay:0.5];
     [self performSelector:@selector(zoomViewIn:) withObject:self.imageLogoSignUpView afterDelay:0.3];
+    
+//    [self.textEmailAddress resignFirstResponder];
+//    [self.textPassword resignFirstResponder];
+//    [self.textPasswordConfirm resignFirstResponder];
+}
+
+- (void)dismissKeyboard;
+{
+    [self.textEmailAddress resignFirstResponder];
+    [self.textPassword resignFirstResponder];
+    [self.textPasswordConfirm resignFirstResponder];
 }
 
 - (void)transformViewUp:(UIView *)myView;
