@@ -7,8 +7,11 @@
 //
 
 #import "MoreTabBarViewController.h"
+static NSString *listMoreOption = @"moreListOption";
 
 @interface MoreTabBarViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *moreTableOptionView;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end
 
@@ -26,13 +29,142 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.hidden = YES;
+    self.moreTableOptionView.dataSource = self;
+    self.moreTableOptionView.delegate = self;
+    self.containerView.backgroundColor = [UIColor colorWithRed:80.0/255.0 green:80.0/255.0 blue:83.0/255.0 alpha:1.0];
+    
+    self.moreTableOptionView.separatorColor = [UIColor colorWithRed:72.0/255.0 green:72.0/255.0 blue:75.0/255.0 alpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    UILabel *titleOfOption;
+    UIImageView *iconOption;
+    UITableViewCell* cell = nil;
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:listMoreOption];
+        
+        if (indexPath.row % 2 == 0)
+        {
+            cell.backgroundColor = [UIColor colorWithRed:80.0/255.0 green:80.0/255.0 blue:83.0/255.0 alpha:1.0];
+        } else {
+            cell.backgroundColor = [UIColor colorWithRed:72.0/255.0 green:72.0/255.0 blue:75.0/255.0 alpha:1.0];
+        }
+        
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+        
+        CGRect frame=CGRectMake(23, 16, 180, 21);
+        CGRect customFrame=CGRectMake(55, 18, 180, 21);
+        
+        CGRect iconFrame=CGRectMake(23, 16, 27, 22);
+        
+        switch (indexPath.row)
+        
+        {
+            case 0:
+                
+                titleOfOption=[[UILabel alloc]init];
+                titleOfOption.frame=customFrame;
+                titleOfOption.tag = 1001;
+                titleOfOption.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:15.85];
+                titleOfOption.textColor = [UIColor whiteColor];
+                [cell.contentView addSubview:titleOfOption];
+                
+                iconOption = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon-change-mall.png"]];
+                iconOption.frame = iconFrame;
+                iconOption.tag = 1005;
+                titleOfOption.text = [NSString stringWithFormat:@"Change Mall"];
+                [cell.contentView addSubview:iconOption];
+                
+                break;
+                
+            case 1:
+                
+                titleOfOption=[[UILabel alloc]init];
+                titleOfOption.frame=customFrame;
+                titleOfOption.tag = 1001;
+                titleOfOption.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:15.85];
+                titleOfOption.textColor = [UIColor whiteColor];
+                [cell.contentView addSubview:titleOfOption];
+                
+                iconOption = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon-get-direction-more.png"]];
+                iconOption.frame = iconFrame;
+                iconOption.tag = 1005;
+                titleOfOption.text = [NSString stringWithFormat:@"Get Directions"];
+                [cell.contentView addSubview:iconOption];
+                
+                break;
+                
+            case 2:
+                titleOfOption=[[UILabel alloc]init];
+                titleOfOption.frame=frame;
+                titleOfOption.tag = 1001;
+                titleOfOption.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:15.85];
+                titleOfOption.textColor = [UIColor whiteColor];
+                titleOfOption.text = [NSString stringWithFormat:@"Feedback"];
+                [cell.contentView addSubview:titleOfOption];
+                
+                break;
+                
+            case 3:
+                titleOfOption=[[UILabel alloc]init];
+                titleOfOption.frame=frame;
+                titleOfOption.tag = 1001;
+                titleOfOption.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:15.85];
+                titleOfOption.textColor = [UIColor whiteColor];
+                titleOfOption.text = [NSString stringWithFormat:@"Saved Stores Notification"];
+                [cell.contentView addSubview:titleOfOption];
+                
+                break;
+                
+            case 4:
+                titleOfOption=[[UILabel alloc]init];
+                titleOfOption.frame=frame;
+                titleOfOption.tag = 1001;
+                titleOfOption.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:15.85];
+                titleOfOption.textColor = [UIColor whiteColor];
+                titleOfOption.text = [NSString stringWithFormat:@"Edit Profile"];
+                [cell.contentView addSubview:titleOfOption];
+                
+                break;
+                
+            case 5:
+                titleOfOption=[[UILabel alloc]init];
+                titleOfOption.frame=frame;
+                titleOfOption.tag = 1001;
+                titleOfOption.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:15.85];
+                titleOfOption.textColor = [UIColor whiteColor];
+                titleOfOption.text = [NSString stringWithFormat:@"Change Password"];
+                [cell.contentView addSubview:titleOfOption];
+                
+                break;
+            
+            case 6:
+                titleOfOption=[[UILabel alloc]init];
+                titleOfOption.frame=frame;
+                titleOfOption.tag = 1001;
+                titleOfOption.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:15.85];
+                titleOfOption.textColor = [UIColor whiteColor];
+                titleOfOption.text = [NSString stringWithFormat:@"Sign Out"];
+                [cell.contentView addSubview:titleOfOption];
+                
+                break;
+                
+        }
+        
+    } else {
+        titleOfOption = (UILabel *)[cell.contentView viewWithTag:1001];
+    }
+    
+    return cell;
 }
 
 /*
@@ -45,5 +177,25 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    NSLog(@"%ld", indexPath.row);
+//    if (indexPath.row == 0) {
+//        
+//        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+//        TabBarViewController *tabbarController = [storyBoard instantiateViewControllerWithIdentifier:@"tabBarController"];
+//        [self.navigationController popToViewController:tabbarController animated:YES];
+//    }
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+{
+    return 7;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+{
+    return 1;
+}
 
 @end

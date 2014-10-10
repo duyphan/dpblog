@@ -12,4 +12,6 @@
 
 @interface StoreTabBarViewController : ViewController <UITableViewDelegate, UITableViewDataSource>
 //@property (strong, nonatomic) Store *store;
+@property (nonatomic) NSInteger mallID;
+- (void)passArrayFilter:(NSArray *)array;
 @end

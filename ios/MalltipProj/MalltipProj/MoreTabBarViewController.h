@@ -7,7 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "SearchViewController.h"
+#import "AppDelegate.h"
+#import "TabBarViewController.h"
 
-@interface MoreTabBarViewController : ViewController
+@interface MoreTabBarViewController : ViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

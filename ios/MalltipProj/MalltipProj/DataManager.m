@@ -46,6 +46,7 @@
         [mallsFromResource enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             
             [malls addObject:[[Mall alloc] initWithMallName:[obj objectForKey:@"name"]
+                                                     mallId:[[obj objectForKey:@"mallId"] integerValue]
                                                           URL:[obj objectForKey:@"url"]
                                                 numbersOfTips:[[obj objectForKey:@"numberOfTips"] integerValue]
                                               numberOfStories:[[obj objectForKey:@"numberOfStories"] integerValue]

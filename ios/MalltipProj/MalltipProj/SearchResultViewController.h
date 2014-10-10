@@ -12,6 +12,7 @@
 #import "LibraryAPI.h"
 #import "AppDelegate.h"
 #import "TabBarViewController.h"
+#import "StoreTabBarViewController.h"
 
 @interface SearchResultViewController : ViewController <UITableViewDataSource, UITableViewDelegate>
 

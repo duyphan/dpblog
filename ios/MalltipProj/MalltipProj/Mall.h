@@ -15,10 +15,12 @@
 @property NSInteger numberOfStories;
 @property NSInteger numberOfSaveTips;
 @property NSInteger numberOfSaveStories;
+@property NSInteger mallId;
 @property NSArray *hours;
 @property CGFloat distance;
 
 - (id)initWithMallName:(NSString *)mallName
+                mallId:(NSInteger)mallId
                    URL:(NSString *)URL
          numbersOfTips:(NSInteger)numberOfTips
        numberOfStories:(NSInteger)numberOfStories

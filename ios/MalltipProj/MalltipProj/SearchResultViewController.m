@@ -163,6 +163,7 @@ static NSString *listMalls = @"ListMalls";
     TabBarViewController *tabbarController = [storyBoard instantiateViewControllerWithIdentifier:@"tabBarController"];
     
     HomeTabBarViewController *homeViewController = [storyBoard instantiateViewControllerWithIdentifier:@"homeTabBarView"];
+    StoreTabBarViewController *storeViewController = [storyBoard instantiateViewControllerWithIdentifier:@"storeTabBarViewController"];
     
     appDelegate.window.rootViewController = tabbarController;
     
@@ -173,6 +174,7 @@ static NSString *listMalls = @"ListMalls";
     Mall *mall = [self.malls objectAtIndex:indexPath.row];
     
     homeViewController.mall = mall;
+    storeViewController.mallID = mall.mallId;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;

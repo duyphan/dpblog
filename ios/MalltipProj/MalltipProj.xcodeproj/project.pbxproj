@@ -14,6 +14,10 @@
 		77540EC919DBE128003C682E /* proximanova-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77540EC519DBE128003C682E /* proximanova-regular-webfont.ttf */; };
 		77540ECA19DBE128003C682E /* proximanova-regular-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 77540EC619DBE128003C682E /* proximanova-regular-webfont.woff */; };
 		77540ED219DBED85003C682E /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77540ED119DBED85003C682E /* SignUpViewController.m */; };
+		7764703119E6370B001DFF0B /* button-close-filter.png in Resources */ = {isa = PBXBuildFile; fileRef = 7764703019E6370B001DFF0B /* button-close-filter.png */; };
+		7764703319E644A3001DFF0B /* stores.json in Resources */ = {isa = PBXBuildFile; fileRef = 7764703219E644A3001DFF0B /* stores.json */; };
+		7764703519E68814001DFF0B /* icon-change-mall.png in Resources */ = {isa = PBXBuildFile; fileRef = 7764703419E68814001DFF0B /* icon-change-mall.png */; };
+		7764703719E6881B001DFF0B /* icon-get-direction-more.png in Resources */ = {isa = PBXBuildFile; fileRef = 7764703619E6881B001DFF0B /* icon-get-direction-more.png */; };
 		7788B35319DAAC50008AFA62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7788B35219DAAC50008AFA62 /* Foundation.framework */; };
 		7788B35519DAAC50008AFA62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7788B35419DAAC50008AFA62 /* CoreGraphics.framework */; };
 		7788B35719DAAC50008AFA62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7788B35619DAAC50008AFA62 /* UIKit.framework */; };
@@ -31,7 +35,6 @@
 		7788B38119DAAC50008AFA62 /* MalltipProjTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7788B38019DAAC50008AFA62 /* MalltipProjTests.m */; };
 		77A8B78519E51BC8003F96C1 /* StoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A8B78419E51BC8003F96C1 /* StoreDataManager.m */; };
 		77A8B78919E51C13003F96C1 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A8B78819E51C13003F96C1 /* Store.m */; };
-		77A8B78B19E51DE2003F96C1 /* stores.json in Resources */ = {isa = PBXBuildFile; fileRef = 77A8B78A19E51DE2003F96C1 /* stores.json */; };
 		77D5E12F19DE8AFE001075DD /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E12E19DE8AFE001075DD /* SearchViewController.m */; };
 		77D5E13419DE9849001075DD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E13319DE9849001075DD /* SearchResultViewController.m */; };
 		77D5E14919E24C94001075DD /* HomeTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E14819E24C94001075DD /* HomeTabBarViewController.m */; };
@@ -110,6 +113,10 @@
 		77540EC619DBE128003C682E /* proximanova-regular-webfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-regular-webfont.woff"; sourceTree = "<group>"; };
 		77540ED019DBED85003C682E /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		77540ED119DBED85003C682E /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		7764703019E6370B001DFF0B /* button-close-filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-close-filter.png"; sourceTree = "<group>"; };
+		7764703219E644A3001DFF0B /* stores.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stores.json; sourceTree = "<group>"; };
+		7764703419E68814001DFF0B /* icon-change-mall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-change-mall.png"; sourceTree = "<group>"; };
+		7764703619E6881B001DFF0B /* icon-get-direction-more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-get-direction-more.png"; sourceTree = "<group>"; };
 		7788B34F19DAAC50008AFA62 /* MalltipProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MalltipProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7788B35219DAAC50008AFA62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7788B35419DAAC50008AFA62 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,7 +141,6 @@
 		77A8B78419E51BC8003F96C1 /* StoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreDataManager.m; sourceTree = "<group>"; };
 		77A8B78719E51C13003F96C1 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		77A8B78819E51C13003F96C1 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
-		77A8B78A19E51DE2003F96C1 /* stores.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stores.json; sourceTree = "<group>"; };
 		77D5E12D19DE8AFE001075DD /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		77D5E12E19DE8AFE001075DD /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		77D5E13219DE9849001075DD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
@@ -499,6 +505,9 @@
 		77D5E14D19E256E3001075DD /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				7764703619E6881B001DFF0B /* icon-get-direction-more.png */,
+				7764703419E68814001DFF0B /* icon-change-mall.png */,
+				7764703019E6370B001DFF0B /* button-close-filter.png */,
 				77D5E1AC19E3A290001075DD /* image-store.png */,
 				77D5E1AA19E38E32001075DD /* icon-filter.png */,
 				77D5E1A819E38E1D001075DD /* icon-search.png */,
@@ -586,7 +595,7 @@
 		77D5E1C319E3FD83001075DD /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				77A8B78A19E51DE2003F96C1 /* stores.json */,
+				7764703219E644A3001DFF0B /* stores.json */,
 				77D5E1C419E3FDC0001075DD /* malls.json */,
 			);
 			name = Data;
@@ -674,6 +683,7 @@
 				77D5E19519E27E4B001075DD /* btn-get-direction.png in Resources */,
 				77D5E18619E256F9001075DD /* store.png in Resources */,
 				77D5E18419E256F9001075DD /* logo.png in Resources */,
+				7764703719E6881B001DFF0B /* icon-get-direction-more.png in Resources */,
 				77D5E19319E27E40001075DD /* bg-stats-stores.png in Resources */,
 				77D5E16F19E256F9001075DD /* icon-get-direction.png in Resources */,
 				7788B36919DAAC50008AFA62 /* Main_iPad.storyboard in Resources */,
@@ -685,6 +695,7 @@
 				77D5E17519E256F9001075DD /* icon-store-not-active.png in Resources */,
 				77D5E1A919E38E1E001075DD /* icon-search.png in Resources */,
 				77540EC919DBE128003C682E /* proximanova-regular-webfont.ttf in Resources */,
+				7764703319E644A3001DFF0B /* stores.json in Resources */,
 				77D5E18919E256F9001075DD /* x_button.png in Resources */,
 				77D5E17E19E256F9001075DD /* button_signup_keyboard.png in Resources */,
 				77D5E18719E256F9001075DD /* tips.png in Resources */,
@@ -701,6 +712,7 @@
 				77D5E17D19E256F9001075DD /* button_search_keyboard.png in Resources */,
 				77D5E17819E256F9001075DD /* icon-tips.png in Resources */,
 				77D5E18019E256F9001075DD /* favorites.png in Resources */,
+				7764703519E68814001DFF0B /* icon-change-mall.png in Resources */,
 				77D5E17019E256F9001075DD /* icon-home.png in Resources */,
 				77D5E17319E256F9001075DD /* icon-share.png in Resources */,
 				77D5E18F19E27A89001075DD /* btn-share.png in Resources */,
@@ -714,12 +726,12 @@
 				77D5E18819E256F9001075DD /* underscore.png in Resources */,
 				77D5E16E19E256F9001075DD /* icon-favorite-not-active.png in Resources */,
 				7788B36619DAAC50008AFA62 /* Main_iPhone.storyboard in Resources */,
+				7764703119E6370B001DFF0B /* button-close-filter.png in Resources */,
 				77D5E17619E256F9001075DD /* icon-tips-large.png in Resources */,
 				77D5E16C19E256F9001075DD /* bg-home-mall.png in Resources */,
 				77D5E1A719E3852A001075DD /* icon-location.png in Resources */,
 				77D5E17B19E256F9001075DD /* button_back.png in Resources */,
 				7788B35D19DAAC50008AFA62 /* InfoPlist.strings in Resources */,
-				77A8B78B19E51DE2003F96C1 /* stores.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

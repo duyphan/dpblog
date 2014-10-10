@@ -8,15 +8,25 @@
 
 #import "StoreTabBarViewController.h"
 static NSString *listStores = @"ListStores";
+static NSMutableArray *arrayOfFilter;
 
 @interface StoreTabBarViewController ()
 {
     NSMutableArray *groupByEachCharacters;
     NSMutableArray *groupByAllCharacters;
 }
+@property (strong, nonatomic) UIView *selectedCategoriesView;
 @property (weak, nonatomic) IBOutlet UITableView *listStoresView;
 @property (strong, nonatomic) NSArray *stores;
 @end
+
+static int const HEIGHT_OF_SCREEN_35 = 480;
+static int const HEIGHT_OF_SCREEN_40 = 568;
+static int const WIDTH_OF_SCREEN = 320;
+static int const HEIGHT_OF_TABLE = 395;
+static int const POINT_OF_Y = 123;
+static int const BUTTON_SPACE_WIDTH = 10;
+static int const BUTTON_SPACE_HEIGHT = 10;
 
 @implementation StoreTabBarViewController
 
@@ -32,9 +42,10 @@ static NSString *listStores = @"ListStores";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+//    NSLog(@"%ld", self.mallID);
     // Get the malls data
     LibraryAPI *dataManager = [LibraryAPI sharedInstance];
+    
     self.stores = [dataManager getStoresAtMallID:4168];
     
     // Allocationg and initializer NSMutable array object
@@ -69,6 +80,85 @@ static NSString *listStores = @"ListStores";
     self.listStoresView.dataSource = self;
     self.listStoresView.delegate = self;
 
+}
+
+- (void)viewWillAppear:(BOOL)animated;
+{
+    [super viewWillAppear:animated];
+    
+    self.tabBarController.tabBar.tintColor = [UIColor colorWithRed:0.0/255.0 green:122.0/255.0 blue:255.0/255.0 alpha:1.0];
+    self.navigationController.navigationBarHidden = NO;
+    self.tabBarController.tabBar.hidden = NO;
+    
+    if (arrayOfFilter.count > 0) {
+        self.selectedCategoriesView = [[UIView alloc]initWithFrame:CGRectMake(0.0f, 120, self.view.frame.size.width, 45.0f)];
+        self.selectedCategoriesView.backgroundColor = [UIColor whiteColor];
+        CGRect frame = CGRectMake(10.0f, 10.0f, 50.0f, 30.0f);
+        for (int i = 0; i < arrayOfFilter.count; i++)
+        {
+            UIButton *button =[UIButton buttonWithType:UIButtonTypeRoundedRect];
+            button.frame = frame;
+            button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:11.32f];
+            button.layer.borderWidth=0.0f;
+            button.layer.borderColor=[[UIColor colorWithRed:16.0/255.0 green:157.0/255.0 blue:255.0/255.0 alpha:1.0] CGColor];
+            button.layer.cornerRadius = 12;
+            button.clipsToBounds = YES;
+            [button setTitle:arrayOfFilter[i] forState:UIControlStateNormal];
+            
+            [button sizeToFit];
+            button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+            
+            if ((frame.origin.x + button.frame.size.width + 45) > self.view.frame.size.width) {
+                frame.origin.x = 10.0f;
+                frame.origin.y += (button.frame.size.height + BUTTON_SPACE_HEIGHT);
+                self.selectedCategoriesView.frame = CGRectMake(self.selectedCategoriesView.frame.origin.x, self.selectedCategoriesView.frame.origin.y, WIDTH_OF_SCREEN, self.selectedCategoriesView.frame.size.height + button.frame.size.height + BUTTON_SPACE_HEIGHT);
+            }
+            
+            button.frame = CGRectMake(frame.origin.x, frame.origin.y, button.frame.size.width + 40, button.frame.size.height);
+            
+            button.backgroundColor = [UIColor colorWithRed:16.0/255.0 green:157.0/255.0 blue:255.0/255.0 alpha:1.0];
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setTintColor:[UIColor whiteColor]];
+            UIImage *backgroundImage = [UIImage imageNamed:@"button-close-filter.png"];
+            [button setImage:backgroundImage forState:UIControlStateNormal];
+            button.imageEdgeInsets = UIEdgeInsetsMake(0.0f, button.frame.size.width - 20, 0.0f, 0.0f);
+            
+            
+            [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+            [self.selectedCategoriesView addSubview:button];
+            
+            if ((frame.origin.x + button.frame.size.width + 30) < self.view.frame.size.width) {
+                frame.origin.x+=(button.frame.size.width + BUTTON_SPACE_WIDTH);
+            }
+            
+        }
+        [self.view addSubview:self.selectedCategoriesView];
+        
+        if ([[UIScreen mainScreen] bounds].size.height == HEIGHT_OF_SCREEN_35) {
+            self.listStoresView.frame = CGRectMake(0, POINT_OF_Y + self.selectedCategoriesView.frame.size.height, WIDTH_OF_SCREEN, HEIGHT_OF_TABLE - (HEIGHT_OF_SCREEN_40-HEIGHT_OF_SCREEN_35) - (self.selectedCategoriesView.frame.size.height));
+        } else {
+            self.listStoresView.frame = CGRectMake(0, POINT_OF_Y+ self.selectedCategoriesView.frame.size.height , WIDTH_OF_SCREEN, HEIGHT_OF_TABLE - (self.selectedCategoriesView.frame.size.height));
+        }
+        
+    } else {
+        [self.selectedCategoriesView removeFromSuperview];
+        if ([[UIScreen mainScreen] bounds].size.height == HEIGHT_OF_SCREEN_35) {
+            self.listStoresView.frame = CGRectMake(0, POINT_OF_Y, WIDTH_OF_SCREEN, HEIGHT_OF_TABLE - (HEIGHT_OF_SCREEN_40-HEIGHT_OF_SCREEN_35));
+        } else {
+            self.listStoresView.frame = CGRectMake(0, POINT_OF_Y, WIDTH_OF_SCREEN, HEIGHT_OF_TABLE);
+        }
+    }
+}
+
+- (void)buttonAction:(UIButton *)sender;
+{
+    for (int i = 0 ; i < arrayOfFilter.count; i++) {
+        if ([arrayOfFilter[i] isEqualToString:sender.titleLabel.text]) {
+            [arrayOfFilter removeObjectAtIndex:i];
+            [self.selectedCategoriesView removeFromSuperview];
+        }
+    }
+    [self viewWillAppear:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -201,6 +291,11 @@ static NSString *listStores = @"ListStores";
     [label sizeToFit];
     
     return label;
+}
+
+- (void)passArrayFilter:(NSArray *)array;
+{
+    arrayOfFilter = [NSMutableArray arrayWithArray:array];
 }
 
 @end

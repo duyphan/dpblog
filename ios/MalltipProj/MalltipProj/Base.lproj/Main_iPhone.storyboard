@@ -526,6 +526,9 @@ and Maps for thousands of Malls!</string>
                                         <state key="normal" image="icon-store-large.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changeTabStore:" destination="S4j-dZ-QQD" eventType="touchUpInside" id="gRQ-Gb-GTq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hvh-qX-qxW">
                                         <rect key="frame" x="183" y="246" width="37" height="36"/>
@@ -691,22 +694,7 @@ Saturday: </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XN5-Ng-788" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="287" y="512"/>
-        </scene>
-        <!--More Tab Bar View Controller - More-->
-        <scene sceneID="xl3-iW-CJk">
-            <objects>
-                <viewController id="15K-zt-mMy" customClass="MoreTabBarViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fcn-K0-xCf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="More" image="icon-more-not-active.png" id="6Wd-G9-cpL"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOj-Kn-2TO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="822" y="902"/>
+            <point key="canvasLocation" x="309" y="1194"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="kwg-RD-qgS">
@@ -940,7 +928,7 @@ Saturday: </string>
                         <segue destination="FUj-sY-mZf" kind="relationship" relationship="viewControllers" id="Onb-Mm-QPG"/>
                         <segue destination="qMf-2I-ZEa" kind="relationship" relationship="viewControllers" id="let-Hq-cCd"/>
                         <segue destination="6c5-9U-f3M" kind="relationship" relationship="viewControllers" id="2z5-Qu-W9r"/>
-                        <segue destination="15K-zt-mMy" kind="relationship" relationship="viewControllers" id="YaD-BC-ocF"/>
+                        <segue destination="65T-to-voS" kind="relationship" relationship="viewControllers" id="YaD-BC-ocF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTQ-9G-bPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -950,7 +938,7 @@ Saturday: </string>
         <!--Store Tab Bar View Controller-->
         <scene sceneID="mvh-oE-FS8">
             <objects>
-                <viewController id="IhC-bn-cT5" customClass="StoreTabBarViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="storeTabBarViewController" id="IhC-bn-cT5" customClass="StoreTabBarViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eLg-Rl-eFL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1136,6 +1124,70 @@ Saturday: </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dn9-nC-tzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="255" y="-919"/>
+        </scene>
+        <!--Navigation Controller - More-->
+        <scene sceneID="ex0-6r-VaC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="65T-to-voS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" image="icon-more-not-active.png" id="6Wd-G9-cpL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l03-bF-cUY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BCz-wr-E3U" kind="relationship" relationship="rootViewController" id="jit-9G-IYt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lym-um-s1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250" y="460"/>
+        </scene>
+        <!--More Tab Bar View Controller-->
+        <scene sceneID="pme-ph-fkU">
+            <objects>
+                <viewController id="BCz-wr-E3U" customClass="MoreTabBarViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5uG-e7-ru0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="DDx-hV-klP">
+                                <rect key="frame" x="0.0" y="22" width="320" height="496"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="9RE-Lp-kDF">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="385"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <inset key="contentInset" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
+                                        <inset key="scrollIndicatorInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="moreListOption" rowHeight="55" id="PPH-JI-1rQ">
+                                                <rect key="frame" x="0.0" y="86" width="320" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PPH-JI-1rQ" id="423-S7-eUr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="253" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.31372550129890442" green="0.31372550129890442" blue="0.32549020648002625" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4ZU-Cy-QK0"/>
+                    <connections>
+                        <outlet property="containerView" destination="DDx-hV-klP" id="vLq-XZ-Uh9"/>
+                        <outlet property="moreTableOptionView" destination="9RE-Lp-kDF" id="eRg-wD-WFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKO-r2-YBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="639" y="459"/>
         </scene>
     </scenes>
     <resources>

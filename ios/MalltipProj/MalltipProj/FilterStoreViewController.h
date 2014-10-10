@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "StoreTabBarViewController.h"
 
 @interface FilterStoreViewController : ViewController
 

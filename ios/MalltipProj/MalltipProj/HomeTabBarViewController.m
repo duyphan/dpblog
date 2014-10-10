@@ -10,6 +10,7 @@
 
 @interface HomeTabBarViewController ()
 @property (weak, nonatomic) IBOutlet UIView *contentsView;
+- (IBAction)changeTabStore:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *nameOfMall;
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackgroundView;
 @property (weak, nonatomic) IBOutlet UILabel *labelTime;
@@ -39,7 +40,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+//    NSLog(@"%ld", self.mall.mallId);
     self.navigationController.navigationBar.hidden = YES;
     self.buttonHideAllHours.hidden = YES;
     self.labelDayOfWeek.hidden = YES;
@@ -122,4 +123,7 @@
     [UIView commitAnimations];
 }
 
+- (IBAction)changeTabStore:(id)sender {
+    [self.tabBarController setSelectedIndex:1];
+}
 @end

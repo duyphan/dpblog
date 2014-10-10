@@ -10,6 +10,7 @@
 
 @implementation Mall
 - (id)initWithMallName:(NSString *)mallName
+                mallId:(NSInteger)mallId
                    URL:(NSString *)URL
          numbersOfTips:(NSInteger)numberOfTips
        numberOfStories:(NSInteger)numberOfStories
@@ -22,6 +23,7 @@
     
     if (self) {
         _mallName = mallName;
+        _mallId = mallId;
         _url = URL;
         _numberOfTips = numberOfTips;
         _numberOfStories = numberOfStories;
@@ -29,6 +31,8 @@
         _numberOfSaveStories = numberOfSaveStories;
         _hours = hours;
         _distance = distance;
+        
+        
     }
     
     return self;

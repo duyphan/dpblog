@@ -10,6 +10,7 @@
 static NSMutableArray *listFilter = nil;
 
 static int const HEIGHT_OF_SCREEN_40 = 568;
+static int const HEIGHT_OF_SCROLL_40 = 420;
 static int const WIDTH_OF_SCREEN = 320;
 static int const BUTTON_SPACE_WIDTH = 10;
 static int const BUTTON_SPACE_HEIGHT = 10;
@@ -46,7 +47,7 @@ static int const BUTTON_INSETS = 10;
     if ([[UIScreen mainScreen] bounds].size.height == HEIGHT_OF_SCREEN_40){
 //        self.FilterScrollView.frame = CGRectMake(0, 0, WIDTH_OF_SCREEN, HEIGHT_OF_SCREEN_35);
         [self.FilterScrollView setScrollEnabled:YES];
-        [self.FilterScrollView setContentSize:CGSizeMake(WIDTH_OF_SCREEN, HEIGHT_OF_SCREEN_40)];
+        [self.FilterScrollView setContentSize:CGSizeMake(WIDTH_OF_SCREEN, HEIGHT_OF_SCROLL_40)];
     } else {
         [self.FilterScrollView setScrollEnabled:NO];
     }
@@ -87,20 +88,22 @@ static int const BUTTON_INSETS = 10;
                          @{@"Title":@"Home & Furniture Custom"},
                          @{@"Title":@"Jewelry Custom"},
                          @{@"Title":@"Junior Apparel Custom"},
-                         @{@"Title":@"Kids & Baby Apparel Custom"},
-                         @{@"Title":@"Luggage Custom"},
-                         @{@"Title":@"Maternity and Nursing Custom"},
-                         @{@"Title":@"Men's Apparel Custom"},
-                         @{@"Title":@"Office Supplies Custom"},
-                         @{@"Title":@"Other Custom"},
-                         @{@"Title":@"Personal Services Custom"},
-                         @{@"Title":@"Shoes Custom"},
-                         @{@"Title":@"Sporting Gear Custom"},
-                         @{@"Title":@"Toys Custom"},
-                         @{@"Title":@"Personal Services Custom"}
+                         @{@"Title":@"Kids & Baby Apparel Custom"}
+//                         @{@"Title":@"Luggage Custom"},
+//                         @{@"Title":@"Maternity and Nursing Custom"},
+//                         @{@"Title":@"Men's Apparel Custom"},
+//                         @{@"Title":@"Office Supplies Custom"},
+//                         @{@"Title":@"Other Custom"},
+//                         @{@"Title":@"Personal Services Custom"},
+//                         @{@"Title":@"Shoes Custom"},
+//                         @{@"Title":@"Sporting Gear Custom"},
+//                         @{@"Title":@"Toys Custom"},
+//                         @{@"Title":@"Personal Services Custom"}
                          ];
     
     [self addListToFilterView];
+    
+    [self.buttonFilterStore addTarget:self action:@selector(dismissViewController) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
@@ -163,6 +166,13 @@ static int const BUTTON_INSETS = 10;
             
         }
     }
+}
+
+- (void)dismissViewController;
+{
+    StoreTabBarViewController *obj = [[StoreTabBarViewController alloc] initWithNibName:NULL bundle:nil];
+    [obj passArrayFilter:listFilter];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)checkListFilter:(UIButton *)sender;
