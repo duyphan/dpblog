@@ -10,7 +10,6 @@
 
 @interface HomeTabBarViewController ()
 @property (weak, nonatomic) IBOutlet UIView *contentsView;
-- (IBAction)changeTabStore:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *nameOfMall;
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackgroundView;
 @property (weak, nonatomic) IBOutlet UILabel *labelTime;
@@ -24,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *numberOfSavedStores;
 - (IBAction)handlePerformSeeAllHours:(id)sender;
 - (IBAction)handleHideAllHours:(id)sender;
+- (IBAction)changeTabStore:(id)sender;
+- (IBAction)changeTabTib:(id)sender;
 @end
 
 @implementation HomeTabBarViewController
@@ -40,7 +41,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    NSLog(@"%ld", self.mall.mallId);
     self.navigationController.navigationBar.hidden = YES;
     self.buttonHideAllHours.hidden = YES;
     self.labelDayOfWeek.hidden = YES;
@@ -50,6 +50,13 @@
     self.numberOfStores.text = [NSString stringWithFormat:@"%ld", (long)self.mall.numberOfStories];
     self.numberOfSavedTips.text = [NSString stringWithFormat:@"%ld", (long)self.mall.numberOfSaveTips];
     self.numberOfSavedStores.text = [NSString stringWithFormat:@"%ld", (long)self.mall.numberOfSaveStories];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated;
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.tintColor = [UIColor colorWithRed:0.0/255.0 green:122.0/255.0 blue:255.0/255.0 alpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -125,5 +132,9 @@
 
 - (IBAction)changeTabStore:(id)sender {
     [self.tabBarController setSelectedIndex:1];
+}
+
+- (IBAction)changeTabTib:(id)sender {
+    [self.tabBarController setSelectedIndex:2];
 }
 @end

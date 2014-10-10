@@ -41,13 +41,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MalltipProj/DataManager.m"
-            timestampString = "434468690.056098"
+            filePath = "MalltipProj/SearchResultViewController.m"
+            timestampString = "434469606.47309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "@implementation DataManager"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "@implementation SearchResultViewController"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,14 +57,30 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MalltipProj/SearchResultViewController.m"
-            timestampString = "434469606.47309"
+            filePath = "MalltipProj/MoreTabBarViewController.m"
+            timestampString = "434607632.092581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "@implementation SearchResultViewController"
-            landmarkType = "3">
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "-initWithNibName:bundle:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MalltipProj/StoreTabBarViewController.m"
+            timestampString = "434622187.596504"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "-buttonAction:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

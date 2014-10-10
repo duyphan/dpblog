@@ -26,7 +26,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.hidden = NO;
+    self.navigationItem.title = @"TIPS";
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:(252.0/255.0) green:(80.0/255.0) blue:(116.0/255.0) alpha:1]};
+}
+
+- (void)viewWillAppear:(BOOL)animated;
+{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = NO;
+    self.tabBarController.tabBar.hidden = NO;
+    
+    self.tabBarController.tabBar.selectedImageTintColor = [UIColor colorWithRed:252.0/225.0
+                                                                          green:80.0/255.0
+                                                                           blue:116.0/255.0
+                                                                          alpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning

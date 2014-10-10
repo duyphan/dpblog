@@ -18,6 +18,8 @@
 		7764703319E644A3001DFF0B /* stores.json in Resources */ = {isa = PBXBuildFile; fileRef = 7764703219E644A3001DFF0B /* stores.json */; };
 		7764703519E68814001DFF0B /* icon-change-mall.png in Resources */ = {isa = PBXBuildFile; fileRef = 7764703419E68814001DFF0B /* icon-change-mall.png */; };
 		7764703719E6881B001DFF0B /* icon-get-direction-more.png in Resources */ = {isa = PBXBuildFile; fileRef = 7764703619E6881B001DFF0B /* icon-get-direction-more.png */; };
+		7764703F19E77DAF001DFF0B /* MySegueSignUpToLogIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 7764703E19E77DAF001DFF0B /* MySegueSignUpToLogIn.m */; };
+		7764704119E7C349001DFF0B /* icon-more-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7764704019E7C349001DFF0B /* icon-more-active.png */; };
 		7788B35319DAAC50008AFA62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7788B35219DAAC50008AFA62 /* Foundation.framework */; };
 		7788B35519DAAC50008AFA62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7788B35419DAAC50008AFA62 /* CoreGraphics.framework */; };
 		7788B35719DAAC50008AFA62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7788B35619DAAC50008AFA62 /* UIKit.framework */; };
@@ -117,6 +119,9 @@
 		7764703219E644A3001DFF0B /* stores.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stores.json; sourceTree = "<group>"; };
 		7764703419E68814001DFF0B /* icon-change-mall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-change-mall.png"; sourceTree = "<group>"; };
 		7764703619E6881B001DFF0B /* icon-get-direction-more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-get-direction-more.png"; sourceTree = "<group>"; };
+		7764703D19E77DAF001DFF0B /* MySegueSignUpToLogIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySegueSignUpToLogIn.h; sourceTree = "<group>"; };
+		7764703E19E77DAF001DFF0B /* MySegueSignUpToLogIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySegueSignUpToLogIn.m; sourceTree = "<group>"; };
+		7764704019E7C349001DFF0B /* icon-more-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-more-active.png"; sourceTree = "<group>"; };
 		7788B34F19DAAC50008AFA62 /* MalltipProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MalltipProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7788B35219DAAC50008AFA62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7788B35419DAAC50008AFA62 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -241,6 +246,23 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		7764703819E77CD0001DFF0B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7764703919E77CD9001DFF0B /* Segue */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		7764703919E77CD9001DFF0B /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				7764703D19E77DAF001DFF0B /* MySegueSignUpToLogIn.h */,
+				7764703E19E77DAF001DFF0B /* MySegueSignUpToLogIn.m */,
+			);
+			name = Segue;
+			sourceTree = "<group>";
+		};
 		7788B34619DAAC50008AFA62 = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +296,7 @@
 		7788B35819DAAC50008AFA62 /* MalltipProj */ = {
 			isa = PBXGroup;
 			children = (
+				7764703819E77CD0001DFF0B /* Helper */,
 				77A8B78019E4D439003F96C1 /* Controller */,
 				77D5E1B519E3F881001075DD /* Vendors */,
 				77D5E1B419E3EE46001075DD /* Models */,
@@ -505,6 +528,7 @@
 		77D5E14D19E256E3001075DD /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				7764704019E7C349001DFF0B /* icon-more-active.png */,
 				7764703619E6881B001DFF0B /* icon-get-direction-more.png */,
 				7764703419E68814001DFF0B /* icon-change-mall.png */,
 				7764703019E6370B001DFF0B /* button-close-filter.png */,
@@ -718,6 +742,7 @@
 				77D5E18F19E27A89001075DD /* btn-share.png in Resources */,
 				77D5E1C519E3FDC0001075DD /* malls.json in Resources */,
 				77D5E1A519E3845E001075DD /* button_login_keyboard.png in Resources */,
+				7764704119E7C349001DFF0B /* icon-more-active.png in Resources */,
 				77D5E17419E256F9001075DD /* icon-store-large.png in Resources */,
 				77D5E17F19E256F9001075DD /* button_submit_keyboard.png in Resources */,
 				77D5E1AD19E3A290001075DD /* image-store.png in Resources */,
@@ -760,6 +785,7 @@
 				77D5E1A319E382CF001075DD /* MoreTabBarViewController.m in Sources */,
 				77D5E1C219E3F9D3001075DD /* DataManager.m in Sources */,
 				77D5E14C19E24DE3001075DD /* StoreTabBarViewController.m in Sources */,
+				7764703F19E77DAF001DFF0B /* MySegueSignUpToLogIn.m in Sources */,
 				77D5E1BC19E3F997001075DD /* Mall.m in Sources */,
 				77D5E13419DE9849001075DD /* SearchResultViewController.m in Sources */,
 				772D2A3C19DD4E54008213C6 /* LogInViewController.m in Sources */,

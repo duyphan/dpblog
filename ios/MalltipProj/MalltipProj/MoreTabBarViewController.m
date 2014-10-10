@@ -7,6 +7,8 @@
 //
 
 #import "MoreTabBarViewController.h"
+#import "SearchResultViewController.h"
+
 static NSString *listMoreOption = @"moreListOption";
 
 @interface MoreTabBarViewController ()
@@ -29,12 +31,21 @@ static NSString *listMoreOption = @"moreListOption";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.navigationController.navigationBar.hidden = YES;
-    self.moreTableOptionView.dataSource = self;
-    self.moreTableOptionView.delegate = self;
     self.containerView.backgroundColor = [UIColor colorWithRed:80.0/255.0 green:80.0/255.0 blue:83.0/255.0 alpha:1.0];
     
     self.moreTableOptionView.separatorColor = [UIColor colorWithRed:72.0/255.0 green:72.0/255.0 blue:75.0/255.0 alpha:1.0];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated;
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.selectedImageTintColor = [UIColor colorWithRed:112.0/225.0
+                                                                          green:112.0/255.0
+                                                                           blue:112.0/255.0
+                                                                          alpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,17 +60,14 @@ static NSString *listMoreOption = @"moreListOption";
     UIImageView *iconOption;
     UITableViewCell* cell = nil;
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:listMoreOption];
         
+        cell = [_moreTableOptionView dequeueReusableCellWithIdentifier:listMoreOption];
         if (indexPath.row % 2 == 0)
         {
             cell.backgroundColor = [UIColor colorWithRed:80.0/255.0 green:80.0/255.0 blue:83.0/255.0 alpha:1.0];
         } else {
             cell.backgroundColor = [UIColor colorWithRed:72.0/255.0 green:72.0/255.0 blue:75.0/255.0 alpha:1.0];
         }
-        
-        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
         
         CGRect frame=CGRectMake(23, 16, 180, 21);
         CGRect customFrame=CGRectMake(55, 18, 180, 21);
@@ -179,13 +187,15 @@ static NSString *listMoreOption = @"moreListOption";
 */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    NSLog(@"%ld", indexPath.row);
-//    if (indexPath.row == 0) {
-//        
-//        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-//        TabBarViewController *tabbarController = [storyBoard instantiateViewControllerWithIdentifier:@"tabBarController"];
-//        [self.navigationController popToViewController:tabbarController animated:YES];
-//    }
+    if (indexPath.row == 0) {
+        
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        SearchResultViewController *searchResultVC = [storyBoard instantiateViewControllerWithIdentifier:@"searchResultViewController"];
+        UINavigationController *searchResultNC = [storyBoard instantiateViewControllerWithIdentifier:@"navigationController"];
+        [searchResultNC pushViewController:searchResultVC animated:NO];
+        
+        [self presentViewController:searchResultNC animated:YES completion:nil];
+    }
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;

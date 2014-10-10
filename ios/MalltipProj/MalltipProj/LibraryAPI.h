@@ -18,8 +18,5 @@
 - (NSArray *)getAllMalls;
 - (NSArray *)getAllStores;
 - (NSArray *)getStoresAtMallID:(NSInteger)mallID;
-//- (NSArray *)getAllSavedTips;
-//- (NSArray *)getAllTips;
-//- (NSArray *)getAllTipCategories;
 
 @end

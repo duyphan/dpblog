@@ -27,6 +27,7 @@
 
 - (IBAction)close:(id)sender;
 - (IBAction)handleButtonSignUp:(id)sender;
+- (IBAction)handleButtonLogin:(id)sender;
 
 - (BOOL)stringIsValidEmail:(NSString *)checkString;
 @end
@@ -308,5 +309,19 @@
         UIAlertView *error = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Enter email and password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [error show];
     }
+}
+
+- (IBAction)handleButtonLogin:(id)sender {
+    
+    id thePresenter = self.presentingViewController;
+    
+    // and test its class
+    if ([thePresenter isKindOfClass:[LogInViewController class]]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        LogInViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
+        [self presentViewController:loginViewController animated:YES completion:nil];
+    }
+    
 }
 @end

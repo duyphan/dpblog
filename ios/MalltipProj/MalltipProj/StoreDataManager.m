@@ -57,9 +57,6 @@
     return self;
 }
 
-/*
- * Get all malls
- */
 - (NSArray *)getAllStores;
 {
     return stores;

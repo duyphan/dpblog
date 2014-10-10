@@ -121,7 +121,7 @@ and Maps for thousands of Malls!</string>
         <!--Log In View Controller-->
         <scene sceneID="12U-Q0-DPq">
             <objects>
-                <viewController id="TVs-fu-8pI" customClass="LogInViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="TVs-fu-8pI" customClass="LogInViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BTd-ex-cfz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -199,7 +199,7 @@ and Maps for thousands of Malls!</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xjP-LF-SOg" kind="modal" id="Uw2-BU-L85"/>
+                                    <action selector="handleButtonSignUp:" destination="TVs-fu-8pI" eventType="touchUpInside" id="N1q-4o-ROj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LXf-Uz-G3m">
@@ -512,6 +512,9 @@ and Maps for thousands of Malls!</string>
                                         <state key="normal" image="icon-tips-large.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changeTabTib:" destination="S4j-dZ-QQD" eventType="touchUpInside" id="R24-e9-Tup"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gJa-KZ-Pht">
                                         <rect key="frame" x="64" y="205" width="44" height="42"/>
@@ -527,7 +530,7 @@ and Maps for thousands of Malls!</string>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="changeTabStore:" destination="S4j-dZ-QQD" eventType="touchUpInside" id="gRQ-Gb-GTq"/>
+                                            <action selector="changeTabStore:" destination="S4j-dZ-QQD" eventType="touchUpInside" id="MrH-aP-QeH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hvh-qX-qxW">
@@ -666,7 +669,7 @@ Saturday: </string>
             </objects>
             <point key="canvasLocation" x="781" y="-919"/>
         </scene>
-        <!--Favorites Tab Bar View Controller - Favorites-->
+        <!--Favorites Tab Bar View Controller-->
         <scene sceneID="zTb-Z4-1DN">
             <objects>
                 <viewController id="6c5-9U-f3M" customClass="FavoritesTabBarViewController" sceneMemberID="viewController">
@@ -675,13 +678,13 @@ Saturday: </string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" image="icon-favorite-not-active.png" id="eNz-SZ-9dE"/>
+                    <navigationItem key="navigationItem" id="vdg-TL-Peu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sg-e2-06y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-251" y="956"/>
+            <point key="canvasLocation" x="275" y="956"/>
         </scene>
-        <!--Tips Tab Bar View Controller - Tips-->
+        <!--Tips Tab Bar View Controller-->
         <scene sceneID="deS-Jm-KqN">
             <objects>
                 <viewController id="qMf-2I-ZEa" customClass="TipsTabBarViewController" sceneMemberID="viewController">
@@ -690,11 +693,11 @@ Saturday: </string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tips" image="icon-tips-not-active.png" id="eat-e7-Rlf"/>
+                    <navigationItem key="navigationItem" id="1uZ-ov-XvY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XN5-Ng-788" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="309" y="1194"/>
+            <point key="canvasLocation" x="1361" y="1194"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="kwg-RD-qgS">
@@ -780,7 +783,7 @@ Saturday: </string>
         <!--Sign Up View Controller-->
         <scene sceneID="YfJ-fa-vVD">
             <objects>
-                <viewController id="xjP-LF-SOg" customClass="SignUpViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signupViewController" id="xjP-LF-SOg" customClass="SignUpViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pw6-Ja-aA1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -851,7 +854,7 @@ Saturday: </string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TVs-fu-8pI" kind="modal" id="1iR-V9-lvZ"/>
+                                    <action selector="handleButtonLogin:" destination="xjP-LF-SOg" eventType="touchUpInside" id="nVl-BG-Ray"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have a Malltip account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oHg-eH-Hnb">
@@ -926,8 +929,8 @@ Saturday: </string>
                     <connections>
                         <segue destination="vF9-fR-flj" kind="relationship" relationship="viewControllers" id="LCS-GR-Bid"/>
                         <segue destination="FUj-sY-mZf" kind="relationship" relationship="viewControllers" id="Onb-Mm-QPG"/>
-                        <segue destination="qMf-2I-ZEa" kind="relationship" relationship="viewControllers" id="let-Hq-cCd"/>
-                        <segue destination="6c5-9U-f3M" kind="relationship" relationship="viewControllers" id="2z5-Qu-W9r"/>
+                        <segue destination="dBV-2f-a3Y" kind="relationship" relationship="viewControllers" id="let-Hq-cCd"/>
+                        <segue destination="075-aC-Ooz" kind="relationship" relationship="viewControllers" id="2z5-Qu-W9r"/>
                         <segue destination="65T-to-voS" kind="relationship" relationship="viewControllers" id="YaD-BC-ocF"/>
                     </connections>
                 </tabBarController>
@@ -1048,7 +1051,7 @@ Saturday: </string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="YXX-dS-WYv">
-                                <rect key="frame" x="-2" y="70" width="325" height="415"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </scrollView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Stores By Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BjC-OO-E0b">
@@ -1142,7 +1145,7 @@ Saturday: </string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lym-um-s1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="250" y="460"/>
+            <point key="canvasLocation" x="776" y="460"/>
         </scene>
         <!--More Tab Bar View Controller-->
         <scene sceneID="pme-ph-fkU">
@@ -1163,15 +1166,19 @@ Saturday: </string>
                                         <inset key="contentInset" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
                                         <inset key="scrollIndicatorInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="moreListOption" rowHeight="55" id="PPH-JI-1rQ">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="moreListOption" rowHeight="55" id="PPH-JI-1rQ">
                                                 <rect key="frame" x="0.0" y="86" width="320" height="55"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PPH-JI-1rQ" id="423-S7-eUr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="253" height="54"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="287" height="54"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BCz-wr-E3U" id="JQo-Wt-PA4"/>
+                                            <outlet property="delegate" destination="BCz-wr-E3U" id="LYg-2t-N2V"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.31372550129890442" green="0.31372550129890442" blue="0.32549020648002625" alpha="1" colorSpace="deviceRGB"/>
@@ -1181,13 +1188,50 @@ Saturday: </string>
                     </view>
                     <navigationItem key="navigationItem" id="4ZU-Cy-QK0"/>
                     <connections>
-                        <outlet property="containerView" destination="DDx-hV-klP" id="vLq-XZ-Uh9"/>
                         <outlet property="moreTableOptionView" destination="9RE-Lp-kDF" id="eRg-wD-WFS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKO-r2-YBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639" y="459"/>
+            <point key="canvasLocation" x="1165" y="459"/>
+        </scene>
+        <!--Navigation Controller - Tips-->
+        <scene sceneID="uxm-FY-8Sk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dBV-2f-a3Y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tips" image="icon-tips-not-active.png" id="eat-e7-Rlf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HBd-sX-daa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qMf-2I-ZEa" kind="relationship" relationship="rootViewController" id="E7V-kx-yRX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DdK-UB-UbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835" y="1194"/>
+        </scene>
+        <!--Navigation Controller - Favorites-->
+        <scene sceneID="taD-Ll-cbm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="075-aC-Ooz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="icon-favorite-not-active.png" id="eNz-SZ-9dE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XNF-9f-4aa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6c5-9U-f3M" kind="relationship" relationship="rootViewController" id="Nje-OH-7ap"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vGE-gc-1kO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-251" y="956"/>
         </scene>
     </scenes>
     <resources>
@@ -1229,8 +1273,4 @@ Saturday: </string>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="qNO-jZ-WoT"/>
-        <segue reference="1iR-V9-lvZ"/>
-    </inferredMetricsTieBreakers>
 </document>

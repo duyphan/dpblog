@@ -87,6 +87,7 @@ static int const BUTTON_SPACE_HEIGHT = 10;
     [super viewWillAppear:animated];
     
     self.tabBarController.tabBar.tintColor = [UIColor colorWithRed:0.0/255.0 green:122.0/255.0 blue:255.0/255.0 alpha:1.0];
+    self.listStoresView.separatorColor = [UIColor clearColor];
     self.navigationController.navigationBarHidden = NO;
     self.tabBarController.tabBar.hidden = NO;
     
@@ -158,6 +159,7 @@ static int const BUTTON_SPACE_HEIGHT = 10;
             [self.selectedCategoriesView removeFromSuperview];
         }
     }
+    [self.listStoresView reloadData];
     [self viewWillAppear:YES];
 }
 

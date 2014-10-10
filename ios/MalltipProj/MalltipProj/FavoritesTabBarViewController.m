@@ -26,7 +26,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.navigationController.navigationBar.hidden = NO;
+    self.navigationItem.title = @"FAVORITES";
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:(239.0/255.0) green:(145.0/255.0) blue:(23.0/255.0) alpha:1]};
+}
+
+- (void)viewWillAppear:(BOOL)animated;
+{
+    [super viewWillAppear:animated];
+    
+    self.tabBarController.tabBar.selectedImageTintColor = [UIColor colorWithRed:239.0/225.0
+                                                                          green:145.0/255.0
+                                                                           blue:23.0/255.0
+                                                                          alpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning

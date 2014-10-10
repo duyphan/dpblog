@@ -88,17 +88,9 @@ static int const BUTTON_INSETS = 10;
                          @{@"Title":@"Home & Furniture Custom"},
                          @{@"Title":@"Jewelry Custom"},
                          @{@"Title":@"Junior Apparel Custom"},
-                         @{@"Title":@"Kids & Baby Apparel Custom"}
-//                         @{@"Title":@"Luggage Custom"},
-//                         @{@"Title":@"Maternity and Nursing Custom"},
-//                         @{@"Title":@"Men's Apparel Custom"},
-//                         @{@"Title":@"Office Supplies Custom"},
-//                         @{@"Title":@"Other Custom"},
-//                         @{@"Title":@"Personal Services Custom"},
-//                         @{@"Title":@"Shoes Custom"},
-//                         @{@"Title":@"Sporting Gear Custom"},
-//                         @{@"Title":@"Toys Custom"},
-//                         @{@"Title":@"Personal Services Custom"}
+                         @{@"Title":@"Kids & Baby Apparel Custom"},
+                         @{@"Title":@"Luggage Custom"},
+                         @{@"Title":@"Maternity and Nursing Custom"}
                          ];
     
     [self addListToFilterView];

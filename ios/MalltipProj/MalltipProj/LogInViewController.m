@@ -7,7 +7,6 @@
 //
 
 #import "LogInViewController.h"
-#import "SearchViewController.h"
 
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
@@ -25,6 +24,7 @@
 - (IBAction)performButtonLogin:(id)sender;
 
 - (IBAction)closeLoginView:(id)sender;
+- (IBAction)handleButtonSignUp:(id)sender;
 
 @end
 
@@ -297,5 +297,18 @@
 
 - (IBAction)closeLoginView:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)handleButtonSignUp:(id)sender {
+    
+    id thePresenter = self.presentingViewController;
+    
+    // and test its class
+    if ([thePresenter isKindOfClass:[SignUpViewController class]]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        SignUpViewController *signupViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signupViewController"];
+        [self presentViewController:signupViewController animated:YES completion:nil];
+    }
 }
 @end
