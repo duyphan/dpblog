@@ -41,6 +41,7 @@ static BOOL check = NO;
     return self;
 }
 
+#pragma mark - Managing Views
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -111,6 +112,7 @@ static BOOL check = NO;
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Helper methods
 - (IBAction)buttonSignUp:(id)sender;
 {
 }
