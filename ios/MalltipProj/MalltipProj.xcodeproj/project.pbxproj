@@ -18,8 +18,8 @@
 		7764703319E644A3001DFF0B /* stores.json in Resources */ = {isa = PBXBuildFile; fileRef = 7764703219E644A3001DFF0B /* stores.json */; };
 		7764703519E68814001DFF0B /* icon-change-mall.png in Resources */ = {isa = PBXBuildFile; fileRef = 7764703419E68814001DFF0B /* icon-change-mall.png */; };
 		7764703719E6881B001DFF0B /* icon-get-direction-more.png in Resources */ = {isa = PBXBuildFile; fileRef = 7764703619E6881B001DFF0B /* icon-get-direction-more.png */; };
-		7764703F19E77DAF001DFF0B /* MySegueSignUpToLogIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 7764703E19E77DAF001DFF0B /* MySegueSignUpToLogIn.m */; };
 		7764704119E7C349001DFF0B /* icon-more-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 7764704019E7C349001DFF0B /* icon-more-active.png */; };
+		777A1AE719EBBA18009FCAE3 /* TransformViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 777A1AE619EBBA18009FCAE3 /* TransformViewHelper.m */; };
 		7788B35319DAAC50008AFA62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7788B35219DAAC50008AFA62 /* Foundation.framework */; };
 		7788B35519DAAC50008AFA62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7788B35419DAAC50008AFA62 /* CoreGraphics.framework */; };
 		7788B35719DAAC50008AFA62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7788B35619DAAC50008AFA62 /* UIKit.framework */; };
@@ -35,7 +35,9 @@
 		7788B37719DAAC50008AFA62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7788B35619DAAC50008AFA62 /* UIKit.framework */; };
 		7788B37F19DAAC50008AFA62 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7788B37D19DAAC50008AFA62 /* InfoPlist.strings */; };
 		7788B38119DAAC50008AFA62 /* MalltipProjTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7788B38019DAAC50008AFA62 /* MalltipProjTests.m */; };
-		77A8B78519E51BC8003F96C1 /* StoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A8B78419E51BC8003F96C1 /* StoreDataManager.m */; };
+		779D459919ED20DF004E599E /* MallAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 779D459819ED20DF004E599E /* MallAPI.m */; };
+		779D459C19ED215E004E599E /* StoreAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 779D459B19ED215E004E599E /* StoreAPI.m */; };
+		779D459F19ED21BE004E599E /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 779D459E19ED21BE004E599E /* DataManager.m */; };
 		77A8B78919E51C13003F96C1 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A8B78819E51C13003F96C1 /* Store.m */; };
 		77D5E12F19DE8AFE001075DD /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E12E19DE8AFE001075DD /* SearchViewController.m */; };
 		77D5E13419DE9849001075DD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E13319DE9849001075DD /* SearchResultViewController.m */; };
@@ -89,8 +91,6 @@
 		77D5E1AD19E3A290001075DD /* image-store.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D5E1AC19E3A290001075DD /* image-store.png */; };
 		77D5E1B119E3D824001075DD /* FilterStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E1B019E3D824001075DD /* FilterStoreViewController.m */; };
 		77D5E1BC19E3F997001075DD /* Mall.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E1BB19E3F997001075DD /* Mall.m */; };
-		77D5E1BF19E3F9C2001075DD /* LibraryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E1BE19E3F9C2001075DD /* LibraryAPI.m */; };
-		77D5E1C219E3F9D3001075DD /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E1C119E3F9D3001075DD /* DataManager.m */; };
 		77D5E1C519E3FDC0001075DD /* malls.json in Resources */ = {isa = PBXBuildFile; fileRef = 77D5E1C419E3FDC0001075DD /* malls.json */; };
 /* End PBXBuildFile section */
 
@@ -119,9 +119,9 @@
 		7764703219E644A3001DFF0B /* stores.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stores.json; sourceTree = "<group>"; };
 		7764703419E68814001DFF0B /* icon-change-mall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-change-mall.png"; sourceTree = "<group>"; };
 		7764703619E6881B001DFF0B /* icon-get-direction-more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-get-direction-more.png"; sourceTree = "<group>"; };
-		7764703D19E77DAF001DFF0B /* MySegueSignUpToLogIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySegueSignUpToLogIn.h; sourceTree = "<group>"; };
-		7764703E19E77DAF001DFF0B /* MySegueSignUpToLogIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySegueSignUpToLogIn.m; sourceTree = "<group>"; };
 		7764704019E7C349001DFF0B /* icon-more-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-more-active.png"; sourceTree = "<group>"; };
+		777A1AE519EBBA18009FCAE3 /* TransformViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformViewHelper.h; sourceTree = "<group>"; };
+		777A1AE619EBBA18009FCAE3 /* TransformViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransformViewHelper.m; sourceTree = "<group>"; };
 		7788B34F19DAAC50008AFA62 /* MalltipProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MalltipProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7788B35219DAAC50008AFA62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7788B35419DAAC50008AFA62 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,8 +142,12 @@
 		7788B37C19DAAC50008AFA62 /* MalltipProjTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MalltipProjTests-Info.plist"; sourceTree = "<group>"; };
 		7788B37E19DAAC50008AFA62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7788B38019DAAC50008AFA62 /* MalltipProjTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MalltipProjTests.m; sourceTree = "<group>"; };
-		77A8B78319E51BC8003F96C1 /* StoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreDataManager.h; sourceTree = "<group>"; };
-		77A8B78419E51BC8003F96C1 /* StoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreDataManager.m; sourceTree = "<group>"; };
+		779D459719ED20DF004E599E /* MallAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallAPI.h; sourceTree = "<group>"; };
+		779D459819ED20DF004E599E /* MallAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallAPI.m; sourceTree = "<group>"; };
+		779D459A19ED215E004E599E /* StoreAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreAPI.h; sourceTree = "<group>"; };
+		779D459B19ED215E004E599E /* StoreAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreAPI.m; sourceTree = "<group>"; };
+		779D459D19ED21BE004E599E /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		779D459E19ED21BE004E599E /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		77A8B78719E51C13003F96C1 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		77A8B78819E51C13003F96C1 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		77D5E12D19DE8AFE001075DD /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -208,10 +212,6 @@
 		77D5E1B019E3D824001075DD /* FilterStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterStoreViewController.m; sourceTree = "<group>"; };
 		77D5E1BA19E3F997001075DD /* Mall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mall.h; sourceTree = "<group>"; };
 		77D5E1BB19E3F997001075DD /* Mall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mall.m; sourceTree = "<group>"; };
-		77D5E1BD19E3F9C2001075DD /* LibraryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryAPI.h; sourceTree = "<group>"; };
-		77D5E1BE19E3F9C2001075DD /* LibraryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryAPI.m; sourceTree = "<group>"; };
-		77D5E1C019E3F9D3001075DD /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
-		77D5E1C119E3F9D3001075DD /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		77D5E1C419E3FDC0001075DD /* malls.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = malls.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,18 +249,10 @@
 		7764703819E77CD0001DFF0B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				7764703919E77CD9001DFF0B /* Segue */,
+				777A1AE519EBBA18009FCAE3 /* TransformViewHelper.h */,
+				777A1AE619EBBA18009FCAE3 /* TransformViewHelper.m */,
 			);
 			name = Helper;
-			sourceTree = "<group>";
-		};
-		7764703919E77CD9001DFF0B /* Segue */ = {
-			isa = PBXGroup;
-			children = (
-				7764703D19E77DAF001DFF0B /* MySegueSignUpToLogIn.h */,
-				7764703E19E77DAF001DFF0B /* MySegueSignUpToLogIn.m */,
-			);
-			name = Segue;
 			sourceTree = "<group>";
 		};
 		7788B34619DAAC50008AFA62 = {
@@ -387,8 +379,8 @@
 		77A8B78119E51A3D003F96C1 /* Mall */ = {
 			isa = PBXGroup;
 			children = (
-				77D5E1C019E3F9D3001075DD /* DataManager.h */,
-				77D5E1C119E3F9D3001075DD /* DataManager.m */,
+				779D459719ED20DF004E599E /* MallAPI.h */,
+				779D459819ED20DF004E599E /* MallAPI.m */,
 			);
 			name = Mall;
 			sourceTree = "<group>";
@@ -396,8 +388,8 @@
 		77A8B78219E51A47003F96C1 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				77A8B78319E51BC8003F96C1 /* StoreDataManager.h */,
-				77A8B78419E51BC8003F96C1 /* StoreDataManager.m */,
+				779D459A19ED215E004E599E /* StoreAPI.h */,
+				779D459B19ED215E004E599E /* StoreAPI.m */,
 			);
 			name = Store;
 			sourceTree = "<group>";
@@ -601,8 +593,8 @@
 			children = (
 				77A8B78219E51A47003F96C1 /* Store */,
 				77A8B78119E51A3D003F96C1 /* Mall */,
-				77D5E1BD19E3F9C2001075DD /* LibraryAPI.h */,
-				77D5E1BE19E3F9C2001075DD /* LibraryAPI.m */,
+				779D459D19ED21BE004E599E /* DataManager.h */,
+				779D459E19ED21BE004E599E /* DataManager.m */,
 			);
 			name = Vendors;
 			sourceTree = "<group>";
@@ -777,15 +769,15 @@
 			files = (
 				77D5E14919E24C94001075DD /* HomeTabBarViewController.m in Sources */,
 				7788B36C19DAAC50008AFA62 /* ViewController.m in Sources */,
+				777A1AE719EBBA18009FCAE3 /* TransformViewHelper.m in Sources */,
 				77D5E1A019E382C3001075DD /* FavoritesTabBarViewController.m in Sources */,
 				77A8B78919E51C13003F96C1 /* Store.m in Sources */,
 				772D2A3F19DD6120008213C6 /* ResetPasswordViewController.m in Sources */,
-				77D5E1BF19E3F9C2001075DD /* LibraryAPI.m in Sources */,
 				7788B36319DAAC50008AFA62 /* AppDelegate.m in Sources */,
 				77D5E1A319E382CF001075DD /* MoreTabBarViewController.m in Sources */,
-				77D5E1C219E3F9D3001075DD /* DataManager.m in Sources */,
+				779D459F19ED21BE004E599E /* DataManager.m in Sources */,
+				779D459919ED20DF004E599E /* MallAPI.m in Sources */,
 				77D5E14C19E24DE3001075DD /* StoreTabBarViewController.m in Sources */,
-				7764703F19E77DAF001DFF0B /* MySegueSignUpToLogIn.m in Sources */,
 				77D5E1BC19E3F997001075DD /* Mall.m in Sources */,
 				77D5E13419DE9849001075DD /* SearchResultViewController.m in Sources */,
 				772D2A3C19DD4E54008213C6 /* LogInViewController.m in Sources */,
@@ -793,9 +785,9 @@
 				77D5E19D19E382B3001075DD /* TipsTabBarViewController.m in Sources */,
 				77D5E1B119E3D824001075DD /* FilterStoreViewController.m in Sources */,
 				77540ED219DBED85003C682E /* SignUpViewController.m in Sources */,
+				779D459C19ED215E004E599E /* StoreAPI.m in Sources */,
 				7788B35F19DAAC50008AFA62 /* main.m in Sources */,
 				77D5E12F19DE8AFE001075DD /* SearchViewController.m in Sources */,
-				77A8B78519E51BC8003F96C1 /* StoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,6 +37,7 @@ static int const BUTTON_INSETS = 10;
     return self;
 }
 
+#pragma mark - Managing View
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -115,15 +116,16 @@ static int const BUTTON_INSETS = 10;
 }
 */
 
+#pragma mark - Helper Methods
 - (void)addListToFilterView;
 {
     CGRect frame = CGRectMake(10.0f, 10.0f, 50.0f, 30.0f);
     for (NSDictionary *dict in self.listbuttonFilter)
     {
-        UIButton *button =[UIButton buttonWithType:UIButtonTypeRoundedRect];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         button.frame = frame;
         button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:13.58f];
-        button.layer.borderWidth=1.0f;
+        button.layer.borderWidth = 1.0f;
         button.layer.cornerRadius = 14;
         button.clipsToBounds = YES;
         [button setTitle:dict[@"Title"] forState:UIControlStateNormal];
@@ -132,7 +134,7 @@ static int const BUTTON_INSETS = 10;
         
         [button setTitleEdgeInsets:UIEdgeInsetsMake(0.0, 10.0, 0.0, 10.0)];
         
-        if ((frame.origin.x + button.frame.size.width + BUTTON_SPACE_WIDTH*3) > self.view.frame.size.width) {
+        if ((frame.origin.x + button.frame.size.width + BUTTON_SPACE_WIDTH * 3) > self.view.frame.size.width) {
             frame.origin.x = 10.0f;
             frame.origin.y += (button.frame.size.height + BUTTON_SPACE_HEIGHT);
         }
@@ -153,7 +155,7 @@ static int const BUTTON_INSETS = 10;
         }
         [button addTarget:self action:@selector(checkListFilter:) forControlEvents:UIControlEventTouchUpInside];
         [self.FilterScrollView addSubview:button];
-        if ((frame.origin.x + button.frame.size.width + BUTTON_SPACE_WIDTH*3) < self.view.frame.size.width) {
+        if ((frame.origin.x + button.frame.size.width + BUTTON_SPACE_WIDTH * 3) < self.view.frame.size.width) {
             frame.origin.x+=(button.frame.size.width + BUTTON_SPACE_WIDTH);
             
         }
@@ -191,6 +193,7 @@ static int const BUTTON_INSETS = 10;
     }
 }
 
+#pragma mark - Handle Button
 - (IBAction)handleCloseButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

@@ -27,13 +27,14 @@ static NSString *listMalls = @"ListMalls";
     return self;
 }
 
+#pragma mark - Managing View
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     // Get the malls data
-    LibraryAPI *dataManager = [LibraryAPI sharedInstance];
-    self.malls = [dataManager getAllMalls];
+    MallAPI *remote = [[MallAPI alloc] init];
+    self.malls = [remote getAllMalls];
     
 //    NSLog(@"Count = %lu", (unsigned long)self.malls.count);
     
@@ -62,10 +63,12 @@ static NSString *listMalls = @"ListMalls";
 }
 */
 
+#pragma mark - Handle Button
 - (IBAction)buttonBack:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark - Table Management
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     UILabel *titleOfMall;

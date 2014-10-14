@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "HomeTabBarViewController.h"
 #import "Mall.h"
-#import "LibraryAPI.h"
+#import "MallAPI.h"
 #import "AppDelegate.h"
 #import "TabBarViewController.h"
 #import "StoreTabBarViewController.h"

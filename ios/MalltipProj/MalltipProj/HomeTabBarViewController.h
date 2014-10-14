@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "Mall.h"
-#import "LibraryAPI.h"
 
 @interface HomeTabBarViewController : ViewController
 @property (strong, nonatomic) Mall *mall;

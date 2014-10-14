@@ -37,6 +37,7 @@
     return self;
 }
 
+#pragma mark - Managing View
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -88,6 +89,8 @@
                    name:UIKeyboardWillHideNotification object:nil];
 }
 
+
+#pragma mark - Handling Keyboard
 - (void)dismissKeyboard;
 {
     [self.textSearchSearchView resignFirstResponder];
@@ -147,6 +150,8 @@
     [self performSelector:@selector(showIconAndButton) withObject:nil afterDelay:0.5];
 }
 
+
+#pragma mark - Helper Methods
 - (void)transformViewUp:(UIView *)myView;
 {
     // Setup the animation
@@ -222,6 +227,7 @@
 }
 */
 
+#pragma mark - Hanlde Buttons
 - (void)performResultSearchViewController;
 {
     if (![self.textSearchSearchView.text isEqualToString:@""]) {

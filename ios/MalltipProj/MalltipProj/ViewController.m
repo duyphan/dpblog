@@ -149,7 +149,7 @@ static BOOL check = NO;
     [self moveView:self.labelDescription];
 }
 
-- (void)moveView:(UIView *)myView;
+- (void)moveView:(UIView *)view;
 {
     // Setup the animation
     [UIView beginAnimations:nil context:NULL];
@@ -159,7 +159,7 @@ static BOOL check = NO;
     
     // The transform matrix
     CGAffineTransform transform = CGAffineTransformMakeTranslation(0, -130);
-    myView.transform = transform;
+    view.transform = transform;
     
     // Commit the changes
     [UIView commitAnimations];

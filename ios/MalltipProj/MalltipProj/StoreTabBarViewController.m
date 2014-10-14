@@ -12,8 +12,8 @@ static NSMutableArray *arrayOfFilter;
 
 @interface StoreTabBarViewController ()
 {
-    NSMutableArray *groupByEachCharacters;
-    NSMutableArray *groupByAllCharacters;
+    NSMutableArray *_groupByEachCharacters;
+    NSMutableArray *_groupByAllCharacters;
 }
 @property (strong, nonatomic) UIView *selectedCategoriesView;
 @property (weak, nonatomic) IBOutlet UITableView *listStoresView;
@@ -39,22 +39,21 @@ static int const BUTTON_SPACE_HEIGHT = 10;
     return self;
 }
 
+#pragma mark - Managing View
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    NSLog(@"%ld", self.mallID);
-    // Get the malls data
-    LibraryAPI *dataManager = [LibraryAPI sharedInstance];
     
-    self.stores = [dataManager getStoresAtMallID:4168];
+    StoreAPI *remote = [[StoreAPI alloc] init];
+    self.stores = [remote getStoresAtMallID:4168];
     
     // Allocationg and initializer NSMutable array object
-    groupByAllCharacters = [[NSMutableArray alloc] init];
+    _groupByAllCharacters = [[NSMutableArray alloc] init];
     
     // This is section that handle how to use the first character  as section name
     for (char c = 'A'; c <= 'Z'; c++) {
         
-        groupByEachCharacters = [[NSMutableArray alloc] init];
+        _groupByEachCharacters = [[NSMutableArray alloc] init];
         
         NSMutableArray *array  = [[NSMutableArray alloc] init];
         
@@ -67,9 +66,9 @@ static int const BUTTON_SPACE_HEIGHT = 10;
         }
         
         if (array != nil && array.count > 0) {
-            [groupByEachCharacters addObject:[NSString stringWithFormat:@"%c", c]];
-            [groupByEachCharacters addObject:array];
-            [groupByAllCharacters addObject:groupByEachCharacters];
+            [_groupByEachCharacters addObject:[NSString stringWithFormat:@"%c", c]];
+            [_groupByEachCharacters addObject:array];
+            [_groupByAllCharacters addObject:_groupByEachCharacters];
         }
     }
     
@@ -151,18 +150,6 @@ static int const BUTTON_SPACE_HEIGHT = 10;
     }
 }
 
-- (void)buttonAction:(UIButton *)sender;
-{
-    for (int i = 0 ; i < arrayOfFilter.count; i++) {
-        if ([arrayOfFilter[i] isEqualToString:sender.titleLabel.text]) {
-            [arrayOfFilter removeObjectAtIndex:i];
-            [self.selectedCategoriesView removeFromSuperview];
-        }
-    }
-    [self.listStoresView reloadData];
-    [self viewWillAppear:YES];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -180,6 +167,7 @@ static int const BUTTON_SPACE_HEIGHT = 10;
 }
 */
 
+#pragma mark - Table Management
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     UILabel *titleOfStore;
@@ -223,7 +211,7 @@ static int const BUTTON_SPACE_HEIGHT = 10;
         logoOfStore = (UIImageView *)[cell.contentView viewWithTag:1005];
     }
     
-    NSArray *storesWithAllFirstCharacters = [groupByAllCharacters objectAtIndex:indexPath.section];
+    NSArray *storesWithAllFirstCharacters = [_groupByAllCharacters objectAtIndex:indexPath.section];
     NSArray *storesWithEachFirstCharacter = [storesWithAllFirstCharacters objectAtIndex:1];
     
     // Get data from Store model with seopcific index path
@@ -238,7 +226,7 @@ static int const BUTTON_SPACE_HEIGHT = 10;
 // The view returned from this methods will be displayed as header title of table view
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;
 {
-    NSArray *storesWithAllFirstCharacters = [groupByAllCharacters objectAtIndex:section];
+    NSArray *storesWithAllFirstCharacters = [_groupByAllCharacters objectAtIndex:section];
     NSString *titleSectionAtEachStore = [storesWithAllFirstCharacters objectAtIndex:0];
     UIView *header = nil;
     UILabel *label = [self newLabelWithTitle:titleSectionAtEachStore];
@@ -271,16 +259,18 @@ static int const BUTTON_SPACE_HEIGHT = 10;
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-    NSArray *stores = [groupByAllCharacters objectAtIndex:section];
+    NSArray *stores = [_groupByAllCharacters objectAtIndex:section];
     NSArray *subStores = [stores objectAtIndex:1];
     return subStores.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
 {
-    return groupByAllCharacters.count;
+    return _groupByAllCharacters.count;
 }
 
+
+#pragma mark - Helper Methods
 // Customize title of header section of table view
 - (UILabel *) newLabelWithTitle:(NSString *)paramTitle;
 {
@@ -298,6 +288,19 @@ static int const BUTTON_SPACE_HEIGHT = 10;
 - (void)passArrayFilter:(NSArray *)array;
 {
     arrayOfFilter = [NSMutableArray arrayWithArray:array];
+}
+
+#pragma mark - Handle Button
+- (void)buttonAction:(UIButton *)sender;
+{
+    for (int i = 0 ; i < arrayOfFilter.count; i++) {
+        if ([arrayOfFilter[i] isEqualToString:sender.titleLabel.text]) {
+            [arrayOfFilter removeObjectAtIndex:i];
+            [self.selectedCategoriesView removeFromSuperview];
+        }
+    }
+    [self.listStoresView reloadData];
+    [self viewWillAppear:YES];
 }
 
 @end

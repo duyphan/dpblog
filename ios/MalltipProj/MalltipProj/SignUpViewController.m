@@ -43,6 +43,7 @@
     return self;
 }
 
+#pragma mark - Managing Views
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -104,6 +105,7 @@
                    name:UIKeyboardWillHideNotification object:nil];
 }
 
+#pragma mark - Handle keyboard
 - (void) handleWhenKeyboardShow:(NSNotification *)paramNotification;
 {
     // Add button Sign Up to keyboard
@@ -181,7 +183,8 @@
     [self.textPasswordConfirm resignFirstResponder];
 }
 
-- (void)transformViewUp:(UIView *)myView;
+#pragma mark - Helper methods
+- (void)transformViewUp:(UIView *)view;
 {
     // Setup the animation
     [UIView beginAnimations:nil context:NULL];
@@ -191,13 +194,13 @@
     
     // The transform matrix
     CGAffineTransform transform = CGAffineTransformMakeTranslation(0, -100);
-    myView.transform = transform;
+    view.transform = transform;
     
     // Commit the changes
     [UIView commitAnimations];
 }
 
-- (void)transformViewDown:(UIView *)myView;
+- (void)transformViewDown:(UIView *)view;
 {
     // Setup the animation
     [UIView beginAnimations:nil context:NULL];
@@ -207,13 +210,13 @@
     
     // The transform matrix
     CGAffineTransform transform = CGAffineTransformMakeTranslation(0, 0);
-    myView.transform = transform;
+    view.transform = transform;
     
     // Commit the changes
     [UIView commitAnimations];
 }
 
-- (void)zoomViewOut:(UIView *)myView;
+- (void)zoomViewOut:(UIView *)view;
 {
     // Setup the animation
     
@@ -224,14 +227,14 @@
     
     // The transform matrix
     CGAffineTransform transform = CGAffineTransformMakeScale(0.7,0.7);
-    myView.transform = transform;
+    view.transform = transform;
     
     // Commit the changes
     [UIView commitAnimations];
     
 }
 
-- (void)zoomViewIn:(UIView *)myView;
+- (void)zoomViewIn:(UIView *)view;
 {
     // Setup the animation
     [UIView beginAnimations:nil context:NULL];
@@ -241,7 +244,7 @@
     
     // The transform matrix
     CGAffineTransform transform = CGAffineTransformMakeScale(1,1);
-    myView.transform = transform;
+    view.transform = transform;
     
     // Commit the changes
     [UIView commitAnimations];
@@ -257,6 +260,17 @@
     self.imageIconOption.hidden = YES;
 }
 
+- (BOOL)stringIsValidEmail:(NSString *)checkString;
+{
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
+}
+
+#pragma mark - Handle button
 - (void)performStartSearchViewController;
 {
     if ([self stringIsValidEmail:self.textEmailAddress.text] && ![self.textPassword.text isEqualToString:@""] && ![self.textPasswordConfirm.text isEqualToString:@""] && [self.textPassword.text isEqualToString:self.textPasswordConfirm.text]) {
@@ -270,30 +284,9 @@
     }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)close:(id)sender;
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (BOOL)stringIsValidEmail:(NSString *)checkString;
-{
-    BOOL stricterFilter = NO;
-    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
-    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
-    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:checkString];
 }
 
 - (IBAction)handleButtonSignUp:(id)sender;

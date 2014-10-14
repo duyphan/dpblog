@@ -28,6 +28,7 @@ static NSString *listMoreOption = @"moreListOption";
     return self;
 }
 
+#pragma mark - Managing View
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -54,6 +55,7 @@ static NSString *listMoreOption = @"moreListOption";
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table Management
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     UILabel *titleOfOption;

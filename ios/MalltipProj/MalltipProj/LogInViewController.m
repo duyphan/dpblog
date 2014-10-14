@@ -39,6 +39,7 @@
     return self;
 }
 
+#pragma mark - Managing Views
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -96,6 +97,7 @@
                    name:UIKeyboardWillHideNotification object:nil];
 }
 
+#pragma mark - Handle keyboard
 - (void)dismissKeyboard;
 {
     [self.textEmailAddressLoginView resignFirstResponder];
@@ -160,6 +162,7 @@
     [self performSelector:@selector(zoomViewIn:) withObject:self.imageLogoLoginView afterDelay:0.3];
 }
 
+#pragma mark - Helper methods
 - (void)transformViewUp:(UIView *)myView;
 {
     // Setup the animation
@@ -242,6 +245,16 @@
     self.buttonResetPasswordLoginView.hidden = YES;
 }
 
+- (BOOL)stringIsValidEmail:(NSString *)checkString;
+{
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -253,6 +266,8 @@
 }
 */
 
+
+#pragma mark - Handle button
 - (void)performStartSearchViewController;
 {
     if ([self stringIsValidEmail:self.textEmailAddressLoginView.text] &&
@@ -267,16 +282,6 @@
         UIAlertView *error = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Enter email and password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [error show];
     }
-}
-
-- (BOOL)stringIsValidEmail:(NSString *)checkString;
-{
-    BOOL stricterFilter = NO;
-    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
-    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
-    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:checkString];
 }
 
 - (IBAction)performButtonLogin:(id)sender;
