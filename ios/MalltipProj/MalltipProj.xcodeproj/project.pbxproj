@@ -39,6 +39,8 @@
 		779D459C19ED215E004E599E /* StoreAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 779D459B19ED215E004E599E /* StoreAPI.m */; };
 		779D459F19ED21BE004E599E /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 779D459E19ED21BE004E599E /* DataManager.m */; };
 		77A8B78919E51C13003F96C1 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A8B78819E51C13003F96C1 /* Store.m */; };
+		77AC634B19F106C900C0A7A9 /* bg-button-tip-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AC634A19F106C900C0A7A9 /* bg-button-tip-selected.png */; };
+		77AC634D19F106D400C0A7A9 /* bg-button-store-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AC634C19F106D400C0A7A9 /* bg-button-store-selected.png */; };
 		77D5E12F19DE8AFE001075DD /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E12E19DE8AFE001075DD /* SearchViewController.m */; };
 		77D5E13419DE9849001075DD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E13319DE9849001075DD /* SearchResultViewController.m */; };
 		77D5E14919E24C94001075DD /* HomeTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E14819E24C94001075DD /* HomeTabBarViewController.m */; };
@@ -150,6 +152,8 @@
 		779D459E19ED21BE004E599E /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		77A8B78719E51C13003F96C1 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		77A8B78819E51C13003F96C1 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		77AC634A19F106C900C0A7A9 /* bg-button-tip-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-button-tip-selected.png"; sourceTree = "<group>"; };
+		77AC634C19F106D400C0A7A9 /* bg-button-store-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-button-store-selected.png"; sourceTree = "<group>"; };
 		77D5E12D19DE8AFE001075DD /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		77D5E12E19DE8AFE001075DD /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		77D5E13219DE9849001075DD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
@@ -520,6 +524,8 @@
 		77D5E14D19E256E3001075DD /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				77AC634C19F106D400C0A7A9 /* bg-button-store-selected.png */,
+				77AC634A19F106C900C0A7A9 /* bg-button-tip-selected.png */,
 				7764704019E7C349001DFF0B /* icon-more-active.png */,
 				7764703619E6881B001DFF0B /* icon-get-direction-more.png */,
 				7764703419E68814001DFF0B /* icon-change-mall.png */,
@@ -710,6 +716,7 @@
 				77D5E19A19E29132001075DD /* btn-hide-all-hours.png in Resources */,
 				77D5E17519E256F9001075DD /* icon-store-not-active.png in Resources */,
 				77D5E1A919E38E1E001075DD /* icon-search.png in Resources */,
+				77AC634B19F106C900C0A7A9 /* bg-button-tip-selected.png in Resources */,
 				77540EC919DBE128003C682E /* proximanova-regular-webfont.ttf in Resources */,
 				7764703319E644A3001DFF0B /* stores.json in Resources */,
 				77D5E18919E256F9001075DD /* x_button.png in Resources */,
@@ -735,6 +742,7 @@
 				77D5E1C519E3FDC0001075DD /* malls.json in Resources */,
 				77D5E1A519E3845E001075DD /* button_login_keyboard.png in Resources */,
 				7764704119E7C349001DFF0B /* icon-more-active.png in Resources */,
+				77AC634D19F106D400C0A7A9 /* bg-button-store-selected.png in Resources */,
 				77D5E17419E256F9001075DD /* icon-store-large.png in Resources */,
 				77D5E17F19E256F9001075DD /* button_submit_keyboard.png in Resources */,
 				77D5E1AD19E3A290001075DD /* image-store.png in Resources */,

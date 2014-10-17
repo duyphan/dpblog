@@ -17,7 +17,10 @@ static NSMutableArray *arrayOfFilter;
 }
 @property (strong, nonatomic) UIView *selectedCategoriesView;
 @property (weak, nonatomic) IBOutlet UITableView *listStoresView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) NSArray *stores;
+
+- (IBAction)handleButtonSearch:(id)sender;
 @end
 
 static int const HEIGHT_OF_SCREEN_35 = 480;
@@ -43,7 +46,7 @@ static int const BUTTON_SPACE_HEIGHT = 10;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.searchBar.hidden = YES;
     StoreAPI *remote = [[StoreAPI alloc] init];
     self.stores = [remote getStoresAtMallID:4168];
     
@@ -303,4 +306,9 @@ static int const BUTTON_SPACE_HEIGHT = 10;
     [self viewWillAppear:YES];
 }
 
+- (IBAction)handleButtonSearch:(id)sender {
+    self.navigationController.navigationBar.hidden = YES;
+    self.searchBar.hidden = NO;
+    [self.searchBar becomeFirstResponder];
+}
 @end

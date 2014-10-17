@@ -323,11 +323,14 @@ and Maps for thousands of Malls!</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search" id="LAR-t9-aE6">
+                            <searchBar contentMode="redraw" placeholder="Search" id="sFK-Zb-X8L">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rAx-rM-Rae" id="ZLs-r8-uLc"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="22" sectionFooterHeight="22" id="naH-db-6IO">
                                 <rect key="frame" x="0.0" y="108" width="332" height="460"/>
@@ -341,12 +344,6 @@ and Maps for thousands of Malls!</string>
                                             <rect key="frame" x="0.0" y="0.0" width="332" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mall of America" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y6k-PQ-hZ2">
-                                                    <rect key="frame" x="20" y="11" width="300" height="15"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15.850000381469727"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri: 9am - 9:30pm • " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kKb-Gr-nqr">
                                                     <rect key="frame" x="20" y="29" width="103" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -376,6 +373,12 @@ and Maps for thousands of Malls!</string>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mall of America" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y6k-PQ-hZ2">
+                                                    <rect key="frame" x="20" y="8" width="300" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15.850000381469727"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -394,34 +397,10 @@ and Maps for thousands of Malls!</string>
                     </navigationItem>
                     <connections>
                         <outlet property="listMallsView" destination="naH-db-6IO" id="xuA-fb-acF"/>
-                        <outlet property="searchDisplayController" destination="Wux-Yv-2Sl" id="Nir-RF-hgd"/>
+                        <outlet property="searchBar" destination="sFK-Zb-X8L" id="Eef-F8-fvS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1O-Ar-8Hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="ulc-uO-f6P">
-                    <connections>
-                        <outlet property="delegate" destination="rAx-rM-Rae" id="Qyu-QH-elS"/>
-                        <outlet property="searchContentsController" destination="rAx-rM-Rae" id="oKT-BB-ljA"/>
-                        <outlet property="searchResultsDataSource" destination="rAx-rM-Rae" id="n41-Dp-bPp"/>
-                        <outlet property="searchResultsDelegate" destination="rAx-rM-Rae" id="RCB-l9-Egs"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="BRm-pX-gEQ">
-                    <connections>
-                        <outlet property="delegate" destination="rAx-rM-Rae" id="wYj-J3-Ddd"/>
-                        <outlet property="searchContentsController" destination="rAx-rM-Rae" id="vc6-si-PDk"/>
-                        <outlet property="searchResultsDataSource" destination="rAx-rM-Rae" id="DwX-aq-U1I"/>
-                        <outlet property="searchResultsDelegate" destination="rAx-rM-Rae" id="DIp-V6-dMr"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="Wux-Yv-2Sl">
-                    <connections>
-                        <outlet property="delegate" destination="rAx-rM-Rae" id="98b-tS-Kfo"/>
-                        <outlet property="searchContentsController" destination="rAx-rM-Rae" id="Xfx-eg-6js"/>
-                        <outlet property="searchResultsDataSource" destination="rAx-rM-Rae" id="zRf-UZ-Rmf"/>
-                        <outlet property="searchResultsDelegate" destination="rAx-rM-Rae" id="IGW-Dh-N5t"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-634" y="196"/>
         </scene>
@@ -667,7 +646,7 @@ Saturday: </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSF-gr-9NS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781" y="-919"/>
+            <point key="canvasLocation" x="675" y="-919"/>
         </scene>
         <!--Favorites Tab Bar View Controller-->
         <scene sceneID="zTb-Z4-1DN">
@@ -676,9 +655,45 @@ Saturday: </string>
                     <view key="view" contentMode="scaleToFill" id="p5v-jS-r0q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="fKW-hS-LIj">
+                                <rect key="frame" x="0.0" y="65" width="320" height="453"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="eid-d0-nba">
+                                        <rect key="frame" x="8" y="44" width="304" height="409"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.7051414251" green="0.1121933396" blue="0.28773973829999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="7iG-Dk-Vea">
+                                        <rect key="frame" x="8" y="44" width="304" height="409"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="rhu-KK-Bza">
+                                        <rect key="frame" x="8" y="8" width="304" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <segments>
+                                            <segment title="Tips"/>
+                                            <segment title="Stores"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="SegmentedControlChanged:" destination="6c5-9U-f3M" eventType="valueChanged" id="aKS-MX-td9"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86274516582489014" green="0.86274516582489014" blue="0.86274516582489014" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="vdg-TL-Peu"/>
+                    <connections>
+                        <outlet property="SegmentControl" destination="rhu-KK-Bza" id="LtL-BS-BqM"/>
+                        <outlet property="storeView" destination="eid-d0-nba" id="9j8-zb-G2r"/>
+                        <outlet property="tipView" destination="7iG-Dk-Vea" id="aea-tB-au9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sg-e2-06y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -977,6 +992,9 @@ Saturday: </string>
                                             <color key="titleColor" red="0.32549020648002625" green="0.32549020648002625" blue="0.33725491166114807" alpha="1" colorSpace="deviceRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="handleButtonSearch:" destination="IhC-bn-cT5" eventType="touchUpInside" id="jcf-1z-ra4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3So-GG-uyR">
                                         <rect key="frame" x="161" y="0.0" width="160" height="36"/>
@@ -1028,6 +1046,14 @@ Saturday: </string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" id="SQX-AD-XaK">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="IhC-bn-cT5" id="Y9P-Pz-O6X"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1036,9 +1062,20 @@ Saturday: </string>
                     </navigationItem>
                     <connections>
                         <outlet property="listStoresView" destination="KvR-mK-miR" id="bY1-BV-5ds"/>
+                        <outlet property="searchBar" destination="SQX-AD-XaK" id="cbS-Fd-dLE"/>
+                        <outlet property="searchDisplayController" destination="we3-m4-gcP" id="uaN-ja-kyb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVk-Mx-Odp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="we3-m4-gcP">
+                    <connections>
+                        <outlet property="delegate" destination="IhC-bn-cT5" id="G6p-SN-Osn"/>
+                        <outlet property="searchBar" destination="SQX-AD-XaK" id="bJf-6s-AgD"/>
+                        <outlet property="searchContentsController" destination="IhC-bn-cT5" id="F9U-YZ-h3P"/>
+                        <outlet property="searchResultsDataSource" destination="IhC-bn-cT5" id="z9o-uv-nnX"/>
+                        <outlet property="searchResultsDelegate" destination="IhC-bn-cT5" id="t2Y-bR-Zy3"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="675" y="-248"/>
         </scene>
@@ -1091,7 +1128,7 @@ Saturday: </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JgD-b8-akn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="-248"/>
+            <point key="canvasLocation" x="1181" y="-241"/>
         </scene>
         <!--Store-->
         <scene sceneID="VjM-C1-6EM">

@@ -14,6 +14,6 @@
 #import "TabBarViewController.h"
 #import "StoreTabBarViewController.h"
 
-@interface SearchResultViewController : ViewController <UITableViewDataSource, UITableViewDelegate>
+@interface SearchResultViewController : ViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @end

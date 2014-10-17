@@ -189,14 +189,16 @@ static NSString *listMoreOption = @"moreListOption";
 */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    if (indexPath.row == 0) {
-        
-        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-        SearchResultViewController *searchResultVC = [storyBoard instantiateViewControllerWithIdentifier:@"searchResultViewController"];
-        UINavigationController *searchResultNC = [storyBoard instantiateViewControllerWithIdentifier:@"navigationController"];
-        [searchResultNC pushViewController:searchResultVC animated:NO];
-        
-        [self presentViewController:searchResultNC animated:YES completion:nil];
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    SearchResultViewController *searchResultVC = [storyBoard instantiateViewControllerWithIdentifier:@"searchResultViewController"];
+    UINavigationController *searchResultNC = [storyBoard instantiateViewControllerWithIdentifier:@"navigationController"];
+    
+    switch (indexPath.row)
+    {
+        case 0:
+            [searchResultNC pushViewController:searchResultVC animated:NO];
+            [self presentViewController:searchResultNC animated:YES completion:nil];
+            break;
     }
 }
 

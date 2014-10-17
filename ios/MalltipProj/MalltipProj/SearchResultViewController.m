@@ -14,6 +14,8 @@ static NSString *listMalls = @"ListMalls";
 - (IBAction)buttonBack:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *listMallsView;
 @property (strong, nonatomic) NSArray *malls;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) UIView *overlayView;
 @end
 
 @implementation SearchResultViewController
@@ -43,6 +45,7 @@ static NSString *listMalls = @"ListMalls";
     
     self.listMallsView.dataSource = self;
     self.listMallsView.delegate = self;
+//    self.searchBar.delegate = self;
 
 }
 
@@ -198,4 +201,37 @@ static NSString *listMalls = @"ListMalls";
     return 1;
 }
 
+#pragma mark - Overlay search display
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar;
+{
+    CGFloat width = self.view.frame.size.width;
+    CGFloat height = self.listMallsView.contentSize.height;
+    
+    self.searchBar.showsCancelButton = YES;
+    self.overlayView = [[UIView alloc]init];
+    CGRect frame = CGRectMake(0, 0, width, height);
+    self.overlayView.frame = frame;
+    self.overlayView.backgroundColor = [UIColor blackColor];
+    self.overlayView.alpha = 0.7;
+    
+//    self.imageLine.hidden = YES;
+    [self.listMallsView addSubview:self.overlayView];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
+{
+    [searchBar resignFirstResponder];
+    [self.overlayView removeFromSuperview];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar;
+{
+    [searchBar resignFirstResponder];
+//    self.navigationController.navigationBar.hidden = NO;
+//    self.buttonSearch.hidden = NO;
+//    self.buttonFilter.hidden = NO;
+//    self.searchBar.hidden = YES;
+    self.searchBar.showsCancelButton = NO;
+    [self.overlayView removeFromSuperview];
+}
 @end
