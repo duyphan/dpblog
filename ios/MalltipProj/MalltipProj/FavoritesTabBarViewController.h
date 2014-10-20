@@ -8,6 +8,6 @@
 
 #import "ViewController.h"
 
-@interface FavoritesTabBarViewController : ViewController
+@interface FavoritesTabBarViewController : ViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

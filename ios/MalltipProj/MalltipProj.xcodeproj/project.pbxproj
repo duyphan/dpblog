@@ -41,6 +41,7 @@
 		77A8B78919E51C13003F96C1 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A8B78819E51C13003F96C1 /* Store.m */; };
 		77AC634B19F106C900C0A7A9 /* bg-button-tip-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AC634A19F106C900C0A7A9 /* bg-button-tip-selected.png */; };
 		77AC634D19F106D400C0A7A9 /* bg-button-store-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AC634C19F106D400C0A7A9 /* bg-button-store-selected.png */; };
+		77C243A219F2113B00164110 /* image-tip-branch.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C243A119F2113B00164110 /* image-tip-branch.png */; };
 		77D5E12F19DE8AFE001075DD /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E12E19DE8AFE001075DD /* SearchViewController.m */; };
 		77D5E13419DE9849001075DD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E13319DE9849001075DD /* SearchResultViewController.m */; };
 		77D5E14919E24C94001075DD /* HomeTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E14819E24C94001075DD /* HomeTabBarViewController.m */; };
@@ -154,6 +155,7 @@
 		77A8B78819E51C13003F96C1 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		77AC634A19F106C900C0A7A9 /* bg-button-tip-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-button-tip-selected.png"; sourceTree = "<group>"; };
 		77AC634C19F106D400C0A7A9 /* bg-button-store-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-button-store-selected.png"; sourceTree = "<group>"; };
+		77C243A119F2113B00164110 /* image-tip-branch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-tip-branch.png"; sourceTree = "<group>"; };
 		77D5E12D19DE8AFE001075DD /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		77D5E12E19DE8AFE001075DD /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		77D5E13219DE9849001075DD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
@@ -524,6 +526,7 @@
 		77D5E14D19E256E3001075DD /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				77C243A119F2113B00164110 /* image-tip-branch.png */,
 				77AC634C19F106D400C0A7A9 /* bg-button-store-selected.png */,
 				77AC634A19F106C900C0A7A9 /* bg-button-tip-selected.png */,
 				7764704019E7C349001DFF0B /* icon-more-active.png */,
@@ -704,6 +707,7 @@
 				77D5E19119E27E38001075DD /* bg-stats-tips.png in Resources */,
 				77D5E19519E27E4B001075DD /* btn-get-direction.png in Resources */,
 				77D5E18619E256F9001075DD /* store.png in Resources */,
+				77C243A219F2113B00164110 /* image-tip-branch.png in Resources */,
 				77D5E18419E256F9001075DD /* logo.png in Resources */,
 				7764703719E6881B001DFF0B /* icon-get-direction-more.png in Resources */,
 				77D5E19319E27E40001075DD /* bg-stats-stores.png in Resources */,
