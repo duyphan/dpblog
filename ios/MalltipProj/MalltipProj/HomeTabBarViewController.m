@@ -38,6 +38,7 @@
     return self;
 }
 
+#pragma mark - Managing View
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -76,6 +77,8 @@
 }
 */
 
+
+#pragma mark - Handle Buttons
 - (IBAction)handleHideAllHours:(id)sender;
 {
     [self.imageBackgroundView setFrame:CGRectMake(0, 20, 320, 122)];
@@ -98,6 +101,7 @@
     self.labelTime.hidden = YES;
 }
 
+#pragma mark - Helper Methods
 - (void)transformViewUp:(UIView *)myView;
 {
     // Setup the animation
@@ -130,6 +134,8 @@
     [UIView commitAnimations];
 }
 
+
+#pragma mark - Changing Tab
 - (IBAction)changeTabStore:(id)sender {
     [self.tabBarController setSelectedIndex:1];
 }

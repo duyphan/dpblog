@@ -34,6 +34,7 @@
     return self;
 }
 
+#pragma mark - Managing Views
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -84,6 +85,8 @@
                    name:UIKeyboardWillHideNotification object:nil];
 }
 
+
+#pragma mark - Handling keyboard
 - (void)dismissKeyboard;
 {
     [self.textEmailResetPasswordView resignFirstResponder];
@@ -147,6 +150,8 @@
     [self performSelector:@selector(zoomViewIn:) withObject:self.imageLogoResetPasswordView afterDelay:0.3];
 }
 
+
+#pragma mark - Helper Methods
 - (void)transformViewUp:(UIView *)myView;
 {
     // Setup the animation
@@ -223,6 +228,16 @@
     self.imageIconOptionResetPasswordView.hidden = YES;
 }
 
+- (BOOL)stringIsValidEmail:(NSString *)checkString;
+{
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
+}
+
 
 /*
 #pragma mark - Navigation
@@ -235,6 +250,7 @@
 }
 */
 
+#pragma mark - Handling button
 - (IBAction)buttonCloseResetPasswordView:(id)sender;
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -250,16 +266,6 @@
         UIAlertView *error = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Enter email and password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [error show];
     }
-}
-
-- (BOOL)stringIsValidEmail:(NSString *)checkString;
-{
-    BOOL stricterFilter = NO;
-    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
-    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
-    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:checkString];
 }
 
 - (void)performSubmitResetPasswordViewController;

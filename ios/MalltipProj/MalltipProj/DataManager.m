@@ -2,34 +2,25 @@
 //  DataManager.m
 //  MalltipProj
 //
-//  Created by DP on 10/7/14.
+//  Created by DP on 10/14/14.
 //  Copyright (c) 2014 ___Test___. All rights reserved.
 //
 
 #import "DataManager.h"
-
-@interface DataManager() {
-    
-    NSMutableArray *malls;
-}
-
+@interface DataManager()
 @end
 
 @implementation DataManager
-
-- (NSArray *)getMallsFromResource:(NSString *)resource resourceType:(NSString *)resourceType;
++ (id)sharedInstance;
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:resource ofType:resourceType];
+    static DataManager *instance = nil;
     
-    NSData *myData = [NSData dataWithContentsOfFile:filePath];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[self alloc] init];
+    });
     
-    NSDictionary *myDictionary = [NSJSONSerialization JSONObjectWithData:myData options:kNilOptions error:nil];
-    
-    NSArray *myArray = [myDictionary objectForKey:@"malls"];
-    
-    NSArray *mallsList = [NSArray arrayWithArray:myArray];
-    
-    return mallsList;
+    return instance;
 }
 
 - (id)init;
@@ -37,33 +28,41 @@
     self = [super init];
     
     if (self) {
-        
-        malls = [[NSMutableArray alloc] init];
-        
-        NSArray *mallsFromResource = [self getMallsFromResource:@"malls"
-                                                   resourceType:@"json"];
-        
-        [mallsFromResource enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            
-            [malls addObject:[[Mall alloc] initWithMallName:[obj objectForKey:@"name"]
-                                                     mallId:[[obj objectForKey:@"mallId"] integerValue]
-                                                          URL:[obj objectForKey:@"url"]
-                                                numbersOfTips:[[obj objectForKey:@"numberOfTips"] integerValue]
-                                              numberOfStories:[[obj objectForKey:@"numberOfStories"] integerValue]
-                                             numberOfSaveTips:[[obj objectForKey:@"numberOfSavedTips"] integerValue]
-                                          numberOfSaveStories:[[obj objectForKey:@"numberOfSaveStories"] integerValue]
-                                                        hours:[obj objectForKey:@"hours"]
-                                                     distance:[[obj objectForKey:@"distance"] floatValue]]];
-            
-            
-        }];
+        //        dataManager = [[DataManager alloc] init];
+        //        storeDataManager = [[StoreDataManager alloc] init];
     }
     
     return self;
 }
 
-- (NSArray *)getAllMalls;
+- (NSArray *)getDataFromResource:(NSString *)resource resourceType:(NSString *)resourceType;
 {
-    return malls;
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:resource ofType:resourceType];
+    
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    NSArray *array = [dictionary objectForKey:resource];
+    
+    NSArray *lists = [NSArray arrayWithArray:array];
+    
+    return lists;
 }
+//
+//- (NSArray *)getAllMalls;
+//{
+//    return [dataManager getAllMalls];
+//}
+//
+//- (NSArray *)getAllStores;
+//{
+//    return [storeDataManager getAllStores];
+//}
+//
+//- (NSArray *)getStoresAtMallID:(NSInteger)mallID;
+//{
+//    return [storeDataManager getStoresAtMallID:mallID];
+//}
+
 @end
