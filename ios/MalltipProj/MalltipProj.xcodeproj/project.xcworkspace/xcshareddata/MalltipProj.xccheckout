@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3B38D572-DECD-46D9-9E8C-ED44EA4A95AC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MalltipProj</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DC4D8FD14BED15D7255F7516BC390C524B0B61CC</key>
+		<string>asoft.git:training/duyphan-training.git</string>
+		<key>EEEAEDA6AD1A69AA42201BE7EBB0734713177F34</key>
+		<string>asoft.git:training/duyphan-training.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MalltipProj.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DC4D8FD14BED15D7255F7516BC390C524B0B61CC</key>
+		<string>../..</string>
+		<key>EEEAEDA6AD1A69AA42201BE7EBB0734713177F34</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>asoft.git:training/duyphan-training.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DC4D8FD14BED15D7255F7516BC390C524B0B61CC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EEEAEDA6AD1A69AA42201BE7EBB0734713177F34</string>
+			<key>IDESourceControlWCCName</key>
+			<string>..</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DC4D8FD14BED15D7255F7516BC390C524B0B61CC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MalltipProj</string>
+		</dict>
+	</array>
+</dict>
+</plist>

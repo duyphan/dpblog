@@ -1,0 +1,260 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7716A0BE199B5327004AD21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7716A0BD199B5327004AD21A /* Foundation.framework */; };
+		7716A0C1199B5327004AD21A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716A0C0199B5327004AD21A /* main.m */; };
+		7716A0C5199B5327004AD21A /* Fibonaci.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7716A0C4199B5327004AD21A /* Fibonaci.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7716A0B8199B5327004AD21A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				7716A0C5199B5327004AD21A /* Fibonaci.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7716A0BA199B5327004AD21A /* Fibonaci */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Fibonaci; sourceTree = BUILT_PRODUCTS_DIR; };
+		7716A0BD199B5327004AD21A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7716A0C0199B5327004AD21A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7716A0C3199B5327004AD21A /* Fibonaci-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fibonaci-Prefix.pch"; sourceTree = "<group>"; };
+		7716A0C4199B5327004AD21A /* Fibonaci.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Fibonaci.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7716A0B7199B5327004AD21A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7716A0BE199B5327004AD21A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7716A0B1199B5327004AD21A = {
+			isa = PBXGroup;
+			children = (
+				7716A0BF199B5327004AD21A /* Fibonaci */,
+				7716A0BC199B5327004AD21A /* Frameworks */,
+				7716A0BB199B5327004AD21A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7716A0BB199B5327004AD21A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7716A0BA199B5327004AD21A /* Fibonaci */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7716A0BC199B5327004AD21A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7716A0BD199B5327004AD21A /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7716A0BF199B5327004AD21A /* Fibonaci */ = {
+			isa = PBXGroup;
+			children = (
+				7716A0C0199B5327004AD21A /* main.m */,
+				7716A0C4199B5327004AD21A /* Fibonaci.1 */,
+				7716A0C2199B5327004AD21A /* Supporting Files */,
+			);
+			path = Fibonaci;
+			sourceTree = "<group>";
+		};
+		7716A0C2199B5327004AD21A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7716A0C3199B5327004AD21A /* Fibonaci-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7716A0B9199B5327004AD21A /* Fibonaci */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7716A0C8199B5327004AD21A /* Build configuration list for PBXNativeTarget "Fibonaci" */;
+			buildPhases = (
+				7716A0B6199B5327004AD21A /* Sources */,
+				7716A0B7199B5327004AD21A /* Frameworks */,
+				7716A0B8199B5327004AD21A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fibonaci;
+			productName = Fibonaci;
+			productReference = 7716A0BA199B5327004AD21A /* Fibonaci */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7716A0B2199B5327004AD21A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___Test___";
+			};
+			buildConfigurationList = 7716A0B5199B5327004AD21A /* Build configuration list for PBXProject "Fibonaci" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7716A0B1199B5327004AD21A;
+			productRefGroup = 7716A0BB199B5327004AD21A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7716A0B9199B5327004AD21A /* Fibonaci */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7716A0B6199B5327004AD21A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7716A0C1199B5327004AD21A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7716A0C6199B5327004AD21A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7716A0C7199B5327004AD21A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7716A0C9199B5327004AD21A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fibonaci/Fibonaci-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7716A0CA199B5327004AD21A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fibonaci/Fibonaci-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7716A0B5199B5327004AD21A /* Build configuration list for PBXProject "Fibonaci" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7716A0C6199B5327004AD21A /* Debug */,
+				7716A0C7199B5327004AD21A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7716A0C8199B5327004AD21A /* Build configuration list for PBXNativeTarget "Fibonaci" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7716A0C9199B5327004AD21A /* Debug */,
+				7716A0CA199B5327004AD21A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7716A0B2199B5327004AD21A /* Project object */;
+}

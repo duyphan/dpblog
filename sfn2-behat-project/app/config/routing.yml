@@ -1,0 +1,3 @@
+BloggerBlogBundle:
+    resource: "@BlogBundle/Resources/config/routing.yml"
+    prefix:   /blogger
