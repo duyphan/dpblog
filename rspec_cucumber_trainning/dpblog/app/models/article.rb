@@ -1,3 +1,7 @@
 class Article < ActiveRecord::Base
-	validates :title, presence: true, length: {minimum: 5}
+	validates :title, presence: true
+
+	def self.by_letter(letter) 
+		where("title LIKE ?", "#{letter}%").order(:title) 
+	end
 end
