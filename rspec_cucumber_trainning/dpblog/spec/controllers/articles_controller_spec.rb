@@ -69,4 +69,81 @@ RSpec.describe ArticlesController, :type => :controller do
       expect(response).to render_template :edit
     end
   end
+
+  describe "POST #create" do
+    before :each do
+      @user = FactoryGirl.create(:user)
+    end
+
+    context "with valid attributes" do
+      it "saves the new article in the database" do
+        expect{
+          post :create, article: FactoryGirl.attributes_for(:article, user: @user)
+        }.to change(Article, :count).by(1)
+      end
+
+      it "redirects to article#show" do
+        post :create, article: FactoryGirl.attributes_for(:article, user: @user)
+        expect(response).to redirect_to article_path(assigns[:article])
+      end
+    end
+
+    context "with invalid attributes" do
+      it "does not save the new article in the database" do
+        expect{
+          post :create, article: FactoryGirl.attributes_for(:invalid_article)
+        }.to_not change(Article, :count)
+      end
+
+      it "re-renders the :new template" do
+        post :create, article: FactoryGirl.attributes_for(:invalid_article)
+        expect(response).to render_template :new
+      end
+    end
+  end
+
+  describe 'PATCH #update' do
+    before :each do
+      @user = FactoryGirl.create(:user)
+      @article = FactoryGirl.create(:article, user: @user, title: 'Lawrence', text: 'John')
+    end
+
+    context "valid attributes" do
+      it "locates the requested @article" do
+        patch :update, id: @article, article: FactoryGirl.attributes_for(:article)
+        expect(assigns(:article)).to eq(@article)
+      end
+
+      it "changes @article's attributes" do
+        patch :update, id: @article,
+          article: FactoryGirl.attributes_for(:article, user: @user, title: 'Larry', text: 'Smith')
+        @article.reload
+        expect(@article.title).to eq('Larry')
+        expect(@article.text).to eq('Smith')
+      end
+
+      it "redirects to the updated article" do
+        patch :update, id: @article, article: FactoryGirl.attributes_for(:article)
+        expect(response).to redirect_to @article
+      end
+    end
+  end
+
+  describe 'DELETE #destroy' do
+    before :each do
+      @user = FactoryGirl.create(:user)
+      @article = FactoryGirl.create(:article, user: @user)
+    end
+
+    it "deletes the article" do
+      expect{
+        delete :destroy, id: @article
+      }.to change(Article,:count).by(-1)
+    end
+
+    it "redirects to article#index" do
+      delete :destroy, id: @article
+      expect(response).to redirect_to articles_url
+    end
+  end
 end
