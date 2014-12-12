@@ -271,64 +271,64 @@ RSpec.describe ArticlesController, :type => :controller do
     end
   end
 
-  # describe "guest access" do
-  #   # GET #index and GET #show examples are the same as those for
-  #   # administrators and users
+  describe "guest access" do
+    # GET #index and GET #show examples are the same as those for
+    # administrators and users
 
-  #   describe 'GET #new' do
-  #     it "requires login" do
-  #       get :new
-  #       expect(response).to redirect_to login_url
-  #     end
-  #   end
+    describe 'GET #new' do
+      it "requires login" do
+        get :new
+        expect(response).to redirect_to login_url
+      end
+    end
 
-  #   describe 'GET #edit' do
-  #     it "requires login" do
-  #       article = create(:article)
-  #       get :edit, id: article
-  #       expect(response).to redirect_to login_url
-  #     end
-  #   end
+    describe 'GET #edit' do
+      it "requires login" do
+        article = create(:article)
+        get :edit, id: article
+        expect(response).to redirect_to login_url
+      end
+    end
 
-  #   describe "POST #create" do
-  #     it "requires login" do
-  #       post :create, id: create(:article),
-  #         article: attributes_for(:article)
-  #       expect(response).to redirect_to login_url
-  #     end
-  #   end
+    describe "POST #create" do
+      it "requires login" do
+        post :create, id: create(:article),
+          article: attributes_for(:article)
+        expect(response).to redirect_to login_url
+      end
+    end
 
-  #   describe 'PUT #update' do
-  #     it "requires login" do
-  #       put :update, id: create(:article),
-  #         article: attributes_for(:article)
-  #       expect(response).to redirect_to login_url
-  #     end
-  #   end
+    describe 'PUT #update' do
+      it "requires login" do
+        put :update, id: create(:article),
+          article: attributes_for(:article)
+        expect(response).to redirect_to login_url
+      end
+    end
 
-  #   describe 'DELETE #destroy' do
-  #     it "requires login" do
-  #       delete :destroy, id: create(:article)
-  #       expect(response).to redirect_to login_url
-  #     end
-  #   end
-  # end
+    describe 'DELETE #destroy' do
+      it "requires login" do
+        delete :destroy, id: create(:article)
+        expect(response).to redirect_to login_url
+      end
+    end
+  end
   
-  # describe 'DELETE #destroy' do
-  #   before :each do
-  #     @user = FactoryGirl.create(:user)
-  #     @article = FactoryGirl.create(:article, user: @user)
-  #   end
+  describe 'DELETE #destroy' do
+    before :each do
+      @user = FactoryGirl.create(:user)
+      @article = FactoryGirl.create(:article, user: @user)
+    end
 
-  #   it "deletes the article" do
-  #     expect{
-  #       delete :destroy, id: @article
-  #     }.to change(Article,:count).by(-1)
-  #   end
+    it "deletes the article" do
+      expect{
+        delete :destroy, id: @article
+      }.to change(Article,:count).by(-1)
+    end
 
-  #   it "redirects to article#index" do
-  #     delete :destroy, id: @article
-  #     expect(response).to redirect_to articles_url
-  #   end
-  # end
+    it "redirects to article#index" do
+      delete :destroy, id: @article
+      expect(response).to redirect_to articles_url
+    end
+  end
 end
