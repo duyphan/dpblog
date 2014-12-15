@@ -284,7 +284,7 @@ RSpec.describe ArticlesController, :type => :controller do
 
     describe 'GET #edit' do
       it "requires login" do
-        article = create(:article)
+        article = FactoryGirl.create(:article)
         get :edit, id: article
         expect(response).to redirect_to login_url
       end
@@ -292,23 +292,23 @@ RSpec.describe ArticlesController, :type => :controller do
 
     describe "POST #create" do
       it "requires login" do
-        post :create, id: create(:article),
-          article: attributes_for(:article)
+        post :create, id: FactoryGirl.create(:article),
+          article: FactoryGirl.attributes_for(:article)
         expect(response).to redirect_to login_url
       end
     end
 
     describe 'PUT #update' do
       it "requires login" do
-        put :update, id: create(:article),
-          article: attributes_for(:article)
+        put :update, id: FactoryGirl.create(:article),
+          article: FactoryGirl.attributes_for(:article)
         expect(response).to redirect_to login_url
       end
     end
 
     describe 'DELETE #destroy' do
       it "requires login" do
-        delete :destroy, id: create(:article)
+        delete :destroy, id: FactoryGirl.create(:article)
         expect(response).to redirect_to login_url
       end
     end
@@ -323,12 +323,12 @@ RSpec.describe ArticlesController, :type => :controller do
     it "deletes the article" do
       expect{
         delete :destroy, id: @article
-      }.to change(Article,:count).by(-1)
+      }.to change(Article,:count).by(0)
     end
 
     it "redirects to article#index" do
       delete :destroy, id: @article
-      expect(response).to redirect_to articles_url
+      expect(response).to redirect_to login_url
     end
   end
 end
