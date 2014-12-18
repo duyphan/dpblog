@@ -58,7 +58,7 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
+test: &test
   <<: *default
   database: dpblog_db_test
   host: 127.0.0.1
@@ -89,3 +89,6 @@ test:
 #   database: dpblog_production
 #   username: dpblog
 #   password: <%= ENV['DPBLOG_DATABASE_PASSWORD'] %>
+
+cucumber:
+  <<: *test

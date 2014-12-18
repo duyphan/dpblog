@@ -2,8 +2,13 @@ require 'rails_helper'
 
 feature 'User management' do
   scenario "adds a new user", js: true do
-    admin = create(:admin)
-    sign_in admin
+    admin = FactoryGirl.create(:admin)
+    
+    visit root_path
+    click_link 'Log In'
+    fill_in 'Email', with: admin.email
+    fill_in 'Password', with: admin.password
+    click_button 'Log In'
 
     visit root_path
     expect{
