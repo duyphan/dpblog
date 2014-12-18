@@ -26,15 +26,21 @@ gem 'sdoc', '~> 0.4.0'
 gem 'twitter-bootstrap-rails'
 
 group :test, :development do
+	gem 'spring-commands-rspec'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'capybara'
   gem 'launchy'
+  gem 'selenium-webdriver'
+  gem 'guard-rspec'
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
 end
 
 group :test do
+	gem 'cucumber-rails', require: false
  	gem 'shoulda-matchers'
+ 	gem 'database_cleaner'
 end
 
 group :development do    #access at rails/routes
@@ -53,4 +59,3 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
