@@ -12,6 +12,12 @@ module UserHelpers
   def confirm_login
     page.has_content?("Logged In!")
   end
+
+  def confirm_article_page
+    page.has_content?("Logged In!")
+    page.has_content?("Listing articles")
+  end
+
 end
 
 World(UserHelpers)
