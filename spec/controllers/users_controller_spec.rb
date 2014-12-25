@@ -8,11 +8,11 @@ RSpec.describe UsersController, :type => :controller do
     end
 
     describe 'GET #index' do
-      it "collects users into @users" do
-        user = FactoryGirl.create(:user)
-        get :index
-        expect(assigns(:users)).to match_array [@user,user]
-      end
+      # it "collects users into @users" do
+      #   user = FactoryGirl.create(:user)
+      #   get :index
+      #   expect(assigns(:users)).to match_array [@user,user]
+      # end
 
       it "renders the :index template" do
         get :index
