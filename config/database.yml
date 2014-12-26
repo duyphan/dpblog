@@ -84,11 +84,13 @@ test: &test
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-# production:
-#   <<: *default
-#   database: dpblog_production
-#   username: dpblog
-#   password: <%= ENV['DPBLOG_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  database: ddk773ii266966
+  host: ec2-54-83-27-26.compute-1.amazonaws.com
+  port: 5432
+  username: arkrgrggxtqmxm
+  password: -LP01045tO2ACERfxotkk5myzh
 
 cucumber:
   <<: *test
