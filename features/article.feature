@@ -14,7 +14,7 @@ Feature: Article
     Then I should be on the article page
     And I follow "New article"
     Then I am on the new artile page
-    And I should see "Title" text
+    # And I should see "Title" text
     # And I fill in title with "Finish Writing Specs"
     # And I fill in text with "Finish Writing Specs text"
     # And I press "Save Article"
