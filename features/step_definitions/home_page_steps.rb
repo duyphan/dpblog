@@ -16,3 +16,11 @@ end
 Then(/^I should see the "(.*?)" title$/) do |title|
   page.should have_content(title)
 end
+
+Then(/^I should see the "(.*?)" button$/) do |button|
+  page.should have_content(button)
+end
+
+Then(/^I am on the article page$/) do
+  visit articles_path
+end
