@@ -2,8 +2,8 @@ Feature: Home page
 
   Scenario: Viewing application's home page
     When I am on the homepage
-    Then I should see the "Welcome DP Blog" title
-    And I should see the "To be or not to be that is the question" title
+    Then I should see the "Welcome to DP Blog" title
+    And I should see the "Built with love." title
 
   Scenario: See the button to come Blog
   	When I am on the homepage
